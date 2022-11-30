@@ -7,57 +7,85 @@ public class Rutas : MonoBehaviour
     [Header("Pin Prefab")]
     public GameObject go;
 
+    [Header("Pins Creados")]
+    [SerializeField] private List<GameObject> pins=new List<GameObject>();
+
     [Header("Posibles Rutas")]
     public Ciudad[] ruta1;
     public Ciudad[] ruta2;
 
     [Header("Informacion de Rutas")]
     [SerializeField] private int nRutas;
-    [SerializeField] public int rutaElegida;
+    public int rutaElegida;
 
     private void Start()
     {
         nRutas = 2;
-        rutaElegida=RandomRuta();
+        pintarRuta();
+    }
+
+    void SelectRuta(int a)
+    {
+        if (a != -1)
+        {
+            BorrarRuta();
+            rutaElegida = a;
+            if (a == 0)
+            {
+                PinToMap(ruta1);
+            }
+            else if (a == 1)
+            {
+                PinToMap(ruta2);
+            }
+        }
+    }
+
+    void pintarRuta() {
+        rutaElegida = RandomRuta();
         SelectRuta(rutaElegida);
     }
 
-    void SelectRuta(int a) {
-        if (a == 0)
-        {
-            PinToMap(ruta1);
-        }
-        else if (a == 1) {
-            PinToMap(ruta2);
-        }
+    public void pintarRuta(string s)
+    {
+        rutaElegida = CodRuta(s);
+        SelectRuta(rutaElegida);
     }
 
     public void PinToMap(Ciudad[] ruta)
     {
         for (int i = 0; i < ruta.Length; i++)
         {
-            Instantiate(go, ruta[i].position, Quaternion.identity);
+            pins.Add(Instantiate(go, ruta[i].position, Quaternion.identity));
         }
     }
 
-    public Ciudad[] CodRuta(string s)
+    public int CodRuta(string s)
     {
         if (s.Equals("a"))
         {
-            return ruta1;
+            return 0;
         }
         else if (s.Equals("b"))
         {
-            return ruta2;
+            return 1;
         }
-
-        return null;
+        Debug.Log("No hay ruta con este código");
+        return -1;
     }
 
     public int RandomRuta() {
         int a = Random.Range(0, nRutas);
         
         return a;
+    }
+
+    public void BorrarRuta() {
+        for (int i = 0; i < pins.Count; i++) {
+            if (pins[i]!=null) {
+                Destroy(pins[i]);
+            }
+        }
     }
 
     private void Update()
