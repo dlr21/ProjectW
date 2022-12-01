@@ -46,17 +46,25 @@ public class Rutas : MonoBehaviour
         SelectRuta(rutaElegida);
     }
 
-    public void pintarRuta(string s)
+    public bool pintarRuta(string s)
     {
         rutaElegida = CodRuta(s);
+        if (rutaElegida == -1) return false;
         SelectRuta(rutaElegida);
+        return true;
     }
 
     public void PinToMap(Ciudad[] ruta)
     {
         for (int i = 0; i < ruta.Length; i++)
         {
-            pins.Add(Instantiate(go, ruta[i].position, Quaternion.identity));
+            if (go != null)
+            {
+                pins.Add(Instantiate(go, ruta[i].position, Quaternion.identity) as GameObject);
+            }
+            else {
+                 Debug.Log("null pro load"); 
+            }
         }
     }
 
@@ -70,7 +78,7 @@ public class Rutas : MonoBehaviour
         {
             return 1;
         }
-        Debug.Log("No hay ruta con este código");
+        
         return -1;
     }
 
@@ -99,4 +107,5 @@ public class Rutas : MonoBehaviour
             Debug.Log(rutaElegida);
         }*/
     }
+
 }

@@ -28,7 +28,12 @@ public class Global : MonoBehaviour
     public void CargarRutaButton()
     {
         string t = codigoRuta.GetComponent<TMP_InputField>().text;
-        gameManager.GetComponent<Rutas>().pintarRuta(t);
-        
+        if (gameManager.GetComponent<Rutas>().pintarRuta(t))
+        {
+            menuOpciones.SetActive(false);
+        }
+        else {
+            Debug.Log("No hay ruta con este código");
+        }
     }
 }

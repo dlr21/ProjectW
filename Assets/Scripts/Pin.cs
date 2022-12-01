@@ -5,6 +5,9 @@ using UnityEngine;
 public class Pin : MonoBehaviour
 {
 
-//que sea clickable y te aparezca un desplegable para seleccionar esa ciudad como viaje
-
+    //que sea clickable y te aparezca un desplegable para seleccionar esa ciudad como viaje
+    public void clic() {
+        gameObject.SetActive(false);
+        Debug.Log("clica");
+    }
 }
