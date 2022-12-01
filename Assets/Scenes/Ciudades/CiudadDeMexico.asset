@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Coidad de Mexico
   position: {x: -4.94, y: 1.45}
-  pista: 
+  pista: Pista para CDMX

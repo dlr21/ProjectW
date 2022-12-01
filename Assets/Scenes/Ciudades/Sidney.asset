@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Sidney
   position: {x: 7.45, y: -2.25}
-  pista: 
+  pista: Pista para Sidney

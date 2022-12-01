@@ -5,9 +5,15 @@ using UnityEngine;
 public class Pin : MonoBehaviour
 {
 
-    //que sea clickable y te aparezca un desplegable para seleccionar esa ciudad como viaje
+    [SerializeField] private Ciudad ciudad;
+
+    //que sea clickable y te aparezca un desplegable para seleccionar esa ciudad como viaje, mandar a la ventana de viajes
     public void clic() {
-        gameObject.SetActive(false);
-        Debug.Log("clica");
+        
     }
+
+    public void setCiudad(Ciudad c) {
+        ciudad = c;
+    }
+
 }

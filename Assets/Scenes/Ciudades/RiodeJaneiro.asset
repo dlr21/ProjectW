@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: "R\xEDo de Janeiro"
   position: {x: -2.18, y: -1.5}
-  pista: 
+  pista: "Pista para R\xEDo de Janeiro"

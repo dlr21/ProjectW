@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Alicante
   position: {x: -0.04, y: 2.32}
-  pista: 
+  pista: Pista para Alicante

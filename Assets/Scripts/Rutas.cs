@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Rutas : MonoBehaviour
 {
@@ -17,11 +18,28 @@ public class Rutas : MonoBehaviour
     [Header("Informacion de Rutas")]
     [SerializeField] private int nRutas;
     public int rutaElegida;
+    [SerializeField] private int nCiudad;
+
+    [SerializeField] private GameObject pistaText;
 
     private void Start()
     {
+        nCiudad = 0;
         nRutas = 2;
         pintarRuta();
+    }
+
+    void pintarRuta()
+    {
+        rutaElegida = RandomRuta();
+        SelectRuta(rutaElegida);
+    }
+
+    public int RandomRuta()
+    {
+        int a = Random.Range(0, nRutas);
+
+        return a;
     }
 
     void SelectRuta(int a)
@@ -32,26 +50,28 @@ public class Rutas : MonoBehaviour
             rutaElegida = a;
             if (a == 0)
             {
+                ruta1[0].activo = true;
                 PinToMap(ruta1);
             }
             else if (a == 1)
             {
+                ruta2[0].activo = true;
                 PinToMap(ruta2);
             }
+
+            pistaCiudad();
         }
     }
 
-    void pintarRuta() {
-        rutaElegida = RandomRuta();
-        SelectRuta(rutaElegida);
-    }
-
-    public bool pintarRuta(string s)
-    {
-        rutaElegida = CodRuta(s);
-        if (rutaElegida == -1) return false;
-        SelectRuta(rutaElegida);
-        return true;
+    //desactiva ruta 1 y 2
+    void DesactivarRutas() {
+        for (int i = 0; i < ruta1.Length; i++) {
+            ruta1[i].activo = false;
+        }
+        for (int i = 0; i < ruta1.Length; i++)
+        {
+            ruta2[i].activo = false;
+        }
     }
 
     public void PinToMap(Ciudad[] ruta)
@@ -60,12 +80,23 @@ public class Rutas : MonoBehaviour
         {
             if (go != null)
             {
-                pins.Add(Instantiate(go, ruta[i].position, Quaternion.identity) as GameObject);
+                GameObject aux = Instantiate(go, ruta[i].position, Quaternion.identity) as GameObject;
+                aux.GetComponent<Pin>().setCiudad(ruta[i]);
+                pins.Add(aux);
             }
-            else {
-                 Debug.Log("null pro load"); 
+            else
+            {
+                Debug.Log("null pro load");
             }
         }
+    }
+
+    public bool pintarRuta(string s)
+    {
+        rutaElegida = CodRuta(s);
+        if (rutaElegida == -1) return false;
+        SelectRuta(rutaElegida);
+        return true;
     }
 
     public int CodRuta(string s)
@@ -81,19 +112,15 @@ public class Rutas : MonoBehaviour
         
         return -1;
     }
-
-    public int RandomRuta() {
-        int a = Random.Range(0, nRutas);
-        
-        return a;
-    }
-
+    
     public void BorrarRuta() {
+        primeraCiudad();
         for (int i = 0; i < pins.Count; i++) {
             if (pins[i]!=null) {
                 Destroy(pins[i]);
             }
         }
+        DesactivarRutas();
     }
 
     private void Update()
@@ -106,6 +133,38 @@ public class Rutas : MonoBehaviour
         {
             Debug.Log(rutaElegida);
         }*/
+    }
+
+    public void siguienteCiudad() {
+        if (rutaElegida == 1)
+        {
+            ruta1[nCiudad].activo = false;
+            nCiudad++;
+            ruta1[nCiudad].activo = true;
+
+        }
+        else if (rutaElegida == 2)
+        {
+            ruta2[nCiudad].activo = false;
+            nCiudad++;
+            ruta2[nCiudad].activo = true;
+        }
+        ruta1[nCiudad].activo = false;
+        nCiudad++;
+        ruta1[nCiudad].activo = true;
+    }
+
+    public void primeraCiudad() {
+        nCiudad = 0;
+    }
+
+    public void pistaCiudad() {
+        for (int i = 0; i < ruta1.Length; i++) {
+            if (ruta1[i].activo) {
+                pistaText.GetComponent<TMP_Text>().text = ruta1[i].pista;
+                return;
+            }
+        }
     }
 
 }

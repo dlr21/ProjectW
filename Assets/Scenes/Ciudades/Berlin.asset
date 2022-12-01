@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Berlin
   position: {x: 0.55, y: 3}
-  pista: 
+  pista: Pista para Berlin

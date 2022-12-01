@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Marrakech
   position: {x: -0.4, y: 1.9}
-  pista: 
+  pista: Pista para Marrakech
