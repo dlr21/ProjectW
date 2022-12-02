@@ -7,6 +7,9 @@ public class Rutas : MonoBehaviour
 {
     [Header("Pin Prefab")]
     public GameObject go;
+    [Header("Pin Usos")]
+    [SerializeField] private GameObject infoCiudad;
+    [SerializeField] private GameObject pinAux;
 
     [Header("Pins Creados")]
     [SerializeField] private List<GameObject> pins=new List<GameObject>();
@@ -72,6 +75,7 @@ public class Rutas : MonoBehaviour
         {
             ruta2[i].activo = false;
         }
+        infoCiudad.SetActive(true);
     }
 
     public void PinToMap(Ciudad[] ruta)
@@ -88,9 +92,19 @@ public class Rutas : MonoBehaviour
             {
                 Debug.Log("null pro load");
             }
+
         }
+
     }
 
+    public void pinsDesactivar() {
+        for (int i = 0; i < pins.Count; i++) {
+            if (pins[i].GetComponent<Pin>().pinClicado) {
+                pins[i].GetComponent<Pin>().clicFuera();
+            }
+        }
+    }
+    
     public bool pintarRuta(string s)
     {
         rutaElegida = CodRuta(s);
@@ -115,9 +129,12 @@ public class Rutas : MonoBehaviour
     
     public void BorrarRuta() {
         primeraCiudad();
-        for (int i = 0; i < pins.Count; i++) {
+        for (int i = pins.Count-1; i > -1; i--) {
             if (pins[i]!=null) {
-                Destroy(pins[i]);
+                GameObject aux = pins[i];
+                Destroy(aux);
+                pins.RemoveAt(i);
+                Debug.Log("destruido");
             }
         }
         DesactivarRutas();

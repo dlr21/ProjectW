@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9d5148c0dbd7f4c8cee9fb88492c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ciudad: {fileID: 0}
+  pinClicado: 0
+  scalePin: {x: 0, y: 0, z: 0}
 --- !u!61 &7647615923853801650
 BoxCollider2D:
   m_ObjectHideFlags: 0
