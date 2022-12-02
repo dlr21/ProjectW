@@ -5,25 +5,23 @@ using UnityEngine;
 public class Pin : MonoBehaviour
 {
 
-    [SerializeField] private Ciudad ciudad;
+    public Ciudad ciudad;
     public bool pinClicado;
     [SerializeField] private Vector3 scalePin;
-    [SerializeField] private GameObject infoCiudad;
-    [SerializeField] private GameObject pinAux;
+    public GameObject infoCiudad;
+    public GameObject pinAux;
 
     void Start()
     {
         pinClicado = false;
         scalePin = transform.localScale;
-        infoCiudad = GameObject.FindWithTag("infoCiudad");
-        pinAux = GameObject.FindWithTag("pinAux");
     }
 
     //que sea clickable y te aparezca un desplegable para seleccionar esa ciudad como viaje, mandar a la ventana de viajes
     public void clic()
     {
+        Debug.Log("clic");
         if (!pinClicado) {
-            Debug.Log("clic dentro");
             pinClicado = true;
             //pin mas grande
             transform.localScale = scalePin + new Vector3(0.5f, 0.5f, 0.5f);
@@ -32,7 +30,7 @@ public class Pin : MonoBehaviour
             SortinLayerPinAuxDentro();
         }
     }
-
+    //por delante la pantalla para salir del pin
     void SortinLayerPinAuxDentro()
     {
         SpriteRenderer[] mesh = pinAux.gameObject.GetComponentsInChildren<SpriteRenderer>();
@@ -48,7 +46,7 @@ public class Pin : MonoBehaviour
             infoCiudad.SetActive(false);
             SortinLayerPinAuxFuera();
     }
-
+    //por detras la pantalla para salir del pin
     void SortinLayerPinAuxFuera()
     {
         SpriteRenderer[] mesh = pinAux.gameObject.GetComponentsInChildren<SpriteRenderer>();

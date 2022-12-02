@@ -62,6 +62,7 @@ public class Rutas : MonoBehaviour
                 PinToMap(ruta2);
             }
 
+            infoCiudad.SetActive(false);
             pistaCiudad();
         }
     }
@@ -86,6 +87,8 @@ public class Rutas : MonoBehaviour
             {
                 GameObject aux = Instantiate(go, ruta[i].position, Quaternion.identity) as GameObject;
                 aux.GetComponent<Pin>().setCiudad(ruta[i]);
+                aux.GetComponent<Pin>().infoCiudad = infoCiudad;
+                aux.GetComponent<Pin>().pinAux = pinAux;
                 pins.Add(aux);
             }
             else
@@ -180,6 +183,15 @@ public class Rutas : MonoBehaviour
             if (ruta1[i].activo) {
                 pistaText.GetComponent<TMP_Text>().text = ruta1[i].pista;
                 return;
+            }
+        }
+    }
+
+    public void ViajarCiudad() {
+        for (int i = 0; i < pins.Count; i++) {
+            Pin p = pins[i].GetComponent<Pin>();
+            if (p.pinClicado) {
+                gameObject.GetComponent<Global>().Viajar(p.ciudad);
             }
         }
     }

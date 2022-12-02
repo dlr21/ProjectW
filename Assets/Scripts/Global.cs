@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Global : MonoBehaviour
@@ -8,6 +9,8 @@ public class Global : MonoBehaviour
     [SerializeField] private GameObject codigoRuta;
     [SerializeField] private GameObject menuOpciones;
     [SerializeField] private GameObject gameManager;
+
+    [SerializeField] private Ciudad viajarA;
 
     private void Update()
     {
@@ -36,4 +39,12 @@ public class Global : MonoBehaviour
             Debug.Log("No hay ruta con este código");
         }
     }
+
+    public void Viajar(Ciudad c) {
+
+        viajarA = c;
+        SceneManager.LoadScene("Tienda");
+    }
+
+
 }
