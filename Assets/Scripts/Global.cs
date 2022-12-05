@@ -11,6 +11,7 @@ public class Global : MonoBehaviour
     [SerializeField] private GameObject gameManager;
 
     [SerializeField] private Ciudad viajarA;
+    [SerializeField] private Ciudad viajarDesde;
 
     private void Update()
     {
