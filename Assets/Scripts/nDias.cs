@@ -23,4 +23,9 @@ public class nDias : MonoBehaviour
         int.TryParse(this.gameObject.GetComponent<TMP_InputField>().text, out viajes.nDias);
         Debug.Log(this.gameObject.GetComponent<TMP_InputField>().text + " " + viajes.nDias);
     }
+
+    public void BotonViajar() {
+
+    }
+
 }

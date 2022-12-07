@@ -13,6 +13,11 @@ public class Global : MonoBehaviour
     [SerializeField] private Ciudad viajarA;
     [SerializeField] private Ciudad viajarDesde;
 
+    private void Start()
+    {
+        //viajarDesde = ciudadAleatoria(); comenzar cada partida desde una ciudad distinta
+    }
+
     private void Update()
     {
         /*if (Input.GetMouseButtonDown(0)){
@@ -47,5 +52,8 @@ public class Global : MonoBehaviour
         SceneManager.LoadScene("Tienda");
     }
 
+    public Ciudad ciudadAleatoria() {
 
+        return null;
+    }
 }

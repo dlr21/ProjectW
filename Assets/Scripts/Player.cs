@@ -36,12 +36,10 @@ public class Player : MonoBehaviour
 
     public void restWallet(int r) {
         wallet = wallet - r;
-        vistaWallet.GetComponent<TextMeshProUGUI>().text = wallet.ToString() + " W";
     }
 
     public void sumWallet(int r)
     {
         wallet = wallet + r;
-        vistaWallet.GetComponent<TextMeshProUGUI>().text = wallet.ToString()+" W";
     }
 }

@@ -40,11 +40,14 @@ public class Pin : MonoBehaviour
         }
     }
 
-    public void clicFuera() {
+    public void clicFuera()
+    {
+        if (pinClicado) { 
             pinClicado = false;
             transform.localScale = scalePin;
             infoCiudad.SetActive(false);
             SortinLayerPinAuxFuera();
+        }
     }
     //por detras la pantalla para salir del pin
     void SortinLayerPinAuxFuera()

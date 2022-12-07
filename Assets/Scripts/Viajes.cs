@@ -31,6 +31,7 @@ public class Viajes : MonoBehaviour
         //get dias y precio
 
         viajando();
+        Debug.Log("Viajando uouououou");
         //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
     }
 
@@ -45,7 +46,7 @@ public class Viajes : MonoBehaviour
         int total = 0;
         total = v.precioDiario * nDias;
         total = total + v.getVueloPrecio();
-
+        Debug.Log(total);
         return total;
     }
 
