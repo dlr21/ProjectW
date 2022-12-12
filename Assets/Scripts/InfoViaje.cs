@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class InfoViaje : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class InfoViaje : MonoBehaviour
     [Header("Managers")]
     public GameObject gameManager;
     public Viajes viajes;
+
+    [Header("Colors")]
+    private Image bg;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +34,20 @@ public class InfoViaje : MonoBehaviour
 
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         viajes = gameManager.GetComponent<Viajes>();
+
+        bg = gameObject.GetComponent<Image>();
     }
 
     public void Seleccion() {
-        gameManager.GetComponent<Viajes>().setViaje(v);
-        Debug.Log("seleccionado " + v.infoV);
+        if (gameManager.GetComponent<Viajes>().setViaje(v))
+        {
+            ColorSelect();
+            Debug.Log("seleccionado " + v.infoV);
+        }
+        else {
+            ColorDesSelect();
+            Debug.Log("DesSeleccionado " + v.infoV);
+        }
     }
 
     public void nDiasChange()
@@ -46,6 +60,14 @@ public class InfoViaje : MonoBehaviour
     public void BotonViajar()
     {
         gameManager.GetComponent<Viajes>().Viajar();
+    }
+
+    void ColorSelect() {
+        bg.color = new Color(Color.green.r, Color.green.g, Color.green.b,0.4f);
+    }
+    void ColorDesSelect()
+    {
+        bg.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0.4f);
     }
 
 }

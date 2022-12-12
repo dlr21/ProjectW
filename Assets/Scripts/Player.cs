@@ -36,6 +36,9 @@ public class Player : MonoBehaviour
 
     public void restWallet(int r) {
         wallet = wallet - r;
+        if (wallet < 0) {
+            Debug.Log("Te quedaste sin dinero");
+        }
     }
 
     public void sumWallet(int r)

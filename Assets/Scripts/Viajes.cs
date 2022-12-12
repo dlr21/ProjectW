@@ -31,7 +31,14 @@ public class Viajes : MonoBehaviour
         //get dias y precio
 
         viajando();
-        Debug.Log("Viajando uouououou");
+        if (!seleccionado || nDias<1)
+        {
+            Debug.Log("NO Viajando");
+        }
+        else {
+            Debug.Log("Viajando uouououou");
+        }
+       
         //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
     }
 
@@ -42,17 +49,26 @@ public class Viajes : MonoBehaviour
     }
 
     public int precioViaje(Viaje v) {
-
         int total = 0;
-        total = v.precioDiario * nDias;
-        total = total + v.getVueloPrecio();
+        if (v != null && nDias>0) {         
+            total = v.precioDiario * nDias;
+            total = total + v.getVueloPrecio();
+        }
         Debug.Log(total);
         return total;
     }
 
     //al hacer clic en el post del viaje
-    public void setViaje(Viaje v) {
-        seleccionado = v;
+    public bool setViaje(Viaje v) {
+        if (!seleccionado)
+        {
+            seleccionado = v;
+            return true;
+        }
+
+        seleccionado = null;
+        return false;
+        
     }
 
 
