@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1037
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 79
+  controlID: 122
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -487,22 +487,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Resources/Viajes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Resources/Viajes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Games\mio\ProjectW
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c0600000
-    m_LastClickedID: 24768
-    m_ExpandedIDs: 00000000a8600000aa60000000ca9a3b
+    m_SelectedIDs: d8630000
+    m_LastClickedID: 25560
+    m_ExpandedIDs: 00000000a8600000aa600000be60000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -658,23 +658,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c8600000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 9eccffff32cefffffaceffff48d1ffff8ad4ffffcad7ffff34d9ffff9edaffff0edcffff98e0fffff0e7ffffeeeaffff62ebffff24fbfffff4ffffff585f000030880000968c0000508d0000f490000034910000da93000040980000f6980000
+      m_SelectedIDs: 14910000
+      m_LastClickedID: 37140
+      m_ExpandedIDs: 5acdffff92cffffff8deffff3ce2ffff1ee5fffffce7fffff4e9ffffd2ebfffff2f4ffffc0f6fffff0f7fffff0f9ffff24fbfffff4ffffffd66000000a61000052630000c6850000b28a0000d48a0000148b00002a8b0000ca8d000090900000dc910000949900004a9b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Viaje
-        m_OriginalName: Viaje
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 34928
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -975,9 +975,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 955.15, y: 740, z: 0}
+    m_Target: {x: 1151.3052, y: 665.1383, z: 6.0655785}
     speed: 2
-    m_Value: {x: 955.15, y: 740, z: 0}
+    m_Value: {x: 1151.3052, y: 665.1383, z: 6.0655785}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1027,9 +1027,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 917.7578
+    m_Target: 585.8584
     speed: 2
-    m_Value: 917.7578
+    m_Value: 585.8584
   m_Ortho:
     m_Target: 1
     speed: 2

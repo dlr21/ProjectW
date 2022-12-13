@@ -34,6 +34,7 @@ public class InfoViaje : MonoBehaviour
 
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         viajes = gameManager.GetComponent<Viajes>();
+        viajes.BotonViajar();
 
         bg = gameObject.GetComponent<Image>();
     }

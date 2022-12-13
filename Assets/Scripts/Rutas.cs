@@ -191,7 +191,9 @@ public class Rutas : MonoBehaviour
         for (int i = 0; i < pins.Count; i++) {
             Pin p = pins[i].GetComponent<Pin>();
             if (p.pinClicado) {
+                Debug.Log(p.ciudad);
                 gameObject.GetComponent<Global>().Viajar(p.ciudad);
+                
             }
         }
     }

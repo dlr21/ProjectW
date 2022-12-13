@@ -6,13 +6,14 @@ using TMPro;
 
 public class Viajes : MonoBehaviour
 {
-    [Header("Player")]
+    [Header("Scripts")]
     public GameObject gameManager;
     [SerializeField]private Player pl;
 
     [Header("Viaje")]
     public Viaje seleccionado;
     public int nDias;
+    public GameObject botonViajar;
 
     [Header("Viajes posibles")]
     [SerializeField] private Viaje[] viajes;
@@ -60,17 +61,26 @@ public class Viajes : MonoBehaviour
 
     //al hacer clic en el post del viaje
     public bool setViaje(Viaje v) {
+
         if (!seleccionado)
         {
+            botonViajar.SetActive(true);
             seleccionado = v;
             return true;
         }
-
+        botonViajar.SetActive(false);
         seleccionado = null;
         return false;
         
     }
 
+    public void BotonViajar() {
+        if (!botonViajar)
+        {
+            botonViajar = GameObject.FindGameObjectWithTag("BotonViajar");
+            botonViajar.SetActive(false);
+        }
+    }
 
 
 }

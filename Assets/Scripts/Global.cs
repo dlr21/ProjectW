@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Linq;
 
 public class Global : MonoBehaviour
 {
@@ -12,10 +13,12 @@ public class Global : MonoBehaviour
 
     [SerializeField] private Ciudad viajarA;
     [SerializeField] private Ciudad viajarDesde;
+    
 
     private void Start()
     {
-        //viajarDesde = ciudadAleatoria(); comenzar cada partida desde una ciudad distinta
+        //comenzar cada partida desde una ciudad distinta
+        viajarDesde = gameObject.GetComponent<Datos>().ciudadAleatoria(); 
     }
 
     private void Update()
@@ -52,8 +55,5 @@ public class Global : MonoBehaviour
         SceneManager.LoadScene("Tienda");
     }
 
-    public Ciudad ciudadAleatoria() {
 
-        return null;
-    }
 }
