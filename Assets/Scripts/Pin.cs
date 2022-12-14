@@ -20,16 +20,18 @@ public class Pin : MonoBehaviour
     //que sea clickable y te aparezca un desplegable para seleccionar esa ciudad como viaje, mandar a la ventana de viajes
     public void clic()
     {
-        Debug.Log("clic");
         if (!pinClicado) {
             pinClicado = true;
             //pin mas grande
             transform.localScale = scalePin + new Vector3(0.5f, 0.5f, 0.5f);
-            //mostrar informacion de viudad
-            infoCiudad.SetActive(true);
+
+            //mostrar informacion de ciudad
+            infoCiudad.GetComponent<infoCiudad>().activar(ciudad);
+
             SortinLayerPinAuxDentro();
         }
     }
+    
     //por delante la pantalla para salir del pin
     void SortinLayerPinAuxDentro()
     {
@@ -45,10 +47,11 @@ public class Pin : MonoBehaviour
         if (pinClicado) { 
             pinClicado = false;
             transform.localScale = scalePin;
-            infoCiudad.SetActive(false);
+            infoCiudad.GetComponent<infoCiudad>().desActivar(ciudad);
             SortinLayerPinAuxFuera();
         }
     }
+   
     //por detras la pantalla para salir del pin
     void SortinLayerPinAuxFuera()
     {

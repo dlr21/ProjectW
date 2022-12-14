@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: CiudadDeMexico
   m_EditorClassIdentifier: 
   nombre: Coidad de Mexico
+  desc: fafadfasdfas
   position: {x: -4.94, y: 1.45}
   pista: Pista para CDMX
+  activo: 1
+  meridiano: 0

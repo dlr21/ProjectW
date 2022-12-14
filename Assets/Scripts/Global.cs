@@ -55,5 +55,13 @@ public class Global : MonoBehaviour
         SceneManager.LoadScene("Tienda");
     }
 
+    public Ciudad getViajarA() {
+        return viajarA;
+    }
+
+    public Ciudad getViajarDesde()
+    {
+        return viajarDesde;
+    }
 
 }

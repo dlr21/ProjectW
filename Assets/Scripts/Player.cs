@@ -12,21 +12,12 @@ public class Player : MonoBehaviour
     [Header("Gameobjects donde poner los valores")]
     public GameObject vistaWallet;
     public GameObject vistaNombre;
-
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
         wallet = 1000;
         vistaWallet.GetComponent<TextMeshProUGUI>().text = wallet.ToString() + " W";
-    }
-
-    private void Update()
-    {
-        /*if (Input.GetMouseButtonDown(0)){
-            restWallet(50);
-        }*/
     }
 
     public void setNombre() {

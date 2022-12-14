@@ -9,8 +9,8 @@ public class Datos : MonoBehaviour
     public List<Ciudad> ciudades;
     public List<Viaje> viajes;
 
-    // Start is called before the first frame update
-    void Start()
+    // Awake para llamarse antes de Start en otros scripts donde se utilizan los datos
+    void Awake()
     {
         ciudades = Resources.LoadAll<Ciudad>("Ciudades").ToList();
         viajes = Resources.LoadAll<Viaje>("Viajes").ToList();
@@ -19,7 +19,8 @@ public class Datos : MonoBehaviour
 
     public Ciudad ciudadAleatoria()
     {
-        Ciudad c = ciudades[Random.Range(0, ciudades.Count)];
+        int a = Random.Range(0, ciudades.Count - 1);
+        Ciudad c = ciudades[a];
         return c;
     }
 }

@@ -7,6 +7,7 @@ public class Rutas : MonoBehaviour
 {
     [Header("Pin Prefab")]
     public GameObject go;
+
     [Header("Pin Usos")]
     [SerializeField] private GameObject infoCiudad;
     [SerializeField] private GameObject pinAux;

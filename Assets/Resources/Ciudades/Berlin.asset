@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Berlin
   m_EditorClassIdentifier: 
   nombre: Berlin
+  desc: fafadfasdfas
   position: {x: 0.55, y: 3}
   pista: Pista para Berlin
+  activo: 0
+  meridiano: 0

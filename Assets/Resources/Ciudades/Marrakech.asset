@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Marrakech
   m_EditorClassIdentifier: 
   nombre: Marrakech
+  desc: fafadfasdfas
   position: {x: -0.4, y: 1.9}
   pista: Pista para Marrakech
+  activo: 0
+  meridiano: 0

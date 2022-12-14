@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: RiodeJaneiro
   m_EditorClassIdentifier: 
   nombre: "R\xEDo de Janeiro"
+  desc: fafadfasdfas
   position: {x: -2.18, y: -1.5}
   pista: "Pista para R\xEDo de Janeiro"
+  activo: 0
+  meridiano: 0

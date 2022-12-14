@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Sidney
   m_EditorClassIdentifier: 
   nombre: Sidney
+  desc: fafadfasdfas
   position: {x: 7.45, y: -2.25}
   pista: Pista para Sidney
+  activo: 0
+  meridiano: 0
