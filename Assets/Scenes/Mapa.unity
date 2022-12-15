@@ -1877,8 +1877,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 262.73135, y: -300}
-  m_SizeDelta: {x: 474.5372, y: 200}
+  m_AnchoredPosition: {x: 300, y: -300}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694766972
 MonoBehaviour:
@@ -2495,8 +2495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: -300}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: -300, y: -300}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &959338137
 MonoBehaviour:
@@ -4712,6 +4712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreCiudad: {fileID: 1756204221}
   descCiudad: {fileID: 694766970}
+  imagCiudad: {fileID: 959338135}
 --- !u!1 &2026543145
 GameObject:
   m_ObjectHideFlags: 0

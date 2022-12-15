@@ -12,5 +12,6 @@ public class Ciudad : ScriptableObject
     public string pista;
     public bool activo=false;
     public int meridiano; //de uno en adelante para el calculo de la distancia
+    public Sprite imagen;
 
 }

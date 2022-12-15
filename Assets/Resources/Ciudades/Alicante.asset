@@ -18,3 +18,4 @@ MonoBehaviour:
   pista: Pista para Alicante
   activo: 0
   meridiano: 0
+  imagen: {fileID: 21300000, guid: 1acd16edd32fd2c4fa7e837ac9f8c345, type: 3}

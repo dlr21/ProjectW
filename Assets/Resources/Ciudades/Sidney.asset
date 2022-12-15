@@ -18,3 +18,4 @@ MonoBehaviour:
   pista: Pista para Sidney
   activo: 0
   meridiano: 0
+  imagen: {fileID: 21300000, guid: f6804cc5be791b74bb9e62b060f51315, type: 3}

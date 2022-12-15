@@ -18,3 +18,4 @@ MonoBehaviour:
   pista: Pista para CDMX
   activo: 1
   meridiano: 0
+  imagen: {fileID: 21300000, guid: 7ae75783dd8b2aa48b1570efc5b44021, type: 3}

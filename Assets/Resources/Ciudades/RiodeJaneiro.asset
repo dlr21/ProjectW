@@ -18,3 +18,4 @@ MonoBehaviour:
   pista: "Pista para R\xEDo de Janeiro"
   activo: 0
   meridiano: 0
+  imagen: {fileID: 21300000, guid: 46c0cd922731cb24a9ae983ecff1821e, type: 3}

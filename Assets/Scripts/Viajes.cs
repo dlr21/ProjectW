@@ -59,11 +59,12 @@ public class Viajes : MonoBehaviour
     //al hacer clic en el post del viaje
     public bool setViaje(Viaje v) {
 
+        Viaje aux = v_seleccionado;
         //si hay viaje seleccionado desseleccionar el viaje en verde
         DesSelectAll();
 
         //si no hay un viaje seleccionado lo selecciono
-        if (!v_seleccionado)
+        if (!v_seleccionado && aux!=v)
         {
             nDias = 0;
             botonViajar.SetActive(true);
