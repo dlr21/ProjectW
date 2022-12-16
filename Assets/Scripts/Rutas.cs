@@ -18,6 +18,7 @@ public class Rutas : MonoBehaviour
     [Header("Posibles Rutas")]
     public Ciudad[] ruta1;
     public Ciudad[] ruta2;
+    public Ciudad[] aleatoria;
 
     [Header("Informacion de Rutas")]
     [SerializeField] private int nRutas;
@@ -30,13 +31,19 @@ public class Rutas : MonoBehaviour
     {
         nCiudad = 0;
         nRutas = 2;
-        pintarRuta();
+        pintarRuta(false);//poner en true para ruta aleatoria
     }
 
-    void pintarRuta()
+    void pintarRuta(bool cod)
     {
-        rutaElegida = RandomRuta();
-        SelectRuta(rutaElegida);
+        if (cod)
+        {
+            rutaElegida = RandomRuta();
+            SelectRuta(rutaElegida);
+        }
+        else {
+            createRuta();
+        }
     }
 
     public int RandomRuta()
@@ -67,6 +74,17 @@ public class Rutas : MonoBehaviour
             pistaCiudad();
         }
     }
+
+    void createRuta() {
+        BorrarRuta();
+        rutaElegida = 99;
+        aleatoria = gameObject.GetComponent<Datos>().rutaAleatoria(); //crear la ruta de 0
+        aleatoria[0].activo = true;
+        PinToMap(aleatoria);
+        infoCiudad.SetActive(false);
+        pistaCiudad();
+}
+
 
     //desactiva ruta 1 y 2
     void DesactivarRutas() {

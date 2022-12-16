@@ -78,4 +78,12 @@ public class InfoViaje : MonoBehaviour
         }
     }
 
+    public void noRaycast() {
+        gameObject.GetComponent<Image>().raycastTarget = false;
+    }
+
+    public void siRaycast()
+    {
+        gameObject.GetComponent<Image>().raycastTarget = true;
+    }
 }
