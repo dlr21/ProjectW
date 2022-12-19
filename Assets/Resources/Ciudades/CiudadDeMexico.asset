@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6651fe8ab5ddf934bb93f2f96b50059f, type: 3}
   m_Name: CiudadDeMexico
   m_EditorClassIdentifier: 
-  nombre: Coidad de Mexico
+  id: 2
+  nombre: Ciudad de Mexico
   desc: fafadfasdfas
   position: {x: -4.94, y: 1.45}
   pista: Pista para CDMX
-  activo: 1
+  activo: 0
   meridiano: 0
   imagen: {fileID: 21300000, guid: 7ae75783dd8b2aa48b1570efc5b44021, type: 3}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6651fe8ab5ddf934bb93f2f96b50059f, type: 3}
   m_Name: Marrakech
   m_EditorClassIdentifier: 
+  id: 3
   nombre: Marrakech
   desc: fafadfasdfas
   position: {x: -0.4, y: 1.9}

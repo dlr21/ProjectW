@@ -9,7 +9,7 @@ public class Datos : MonoBehaviour
     public List<Ciudad> ciudades;
     public List<Viaje> viajes;
 
-    [SerializeField]private int nCiudades=15;
+    [SerializeField]private int nCiudades;
 
     // Awake para llamarse antes de Start en otros scripts donde se utilizan los datos
     void Awake()
@@ -29,11 +29,37 @@ public class Datos : MonoBehaviour
     public Ciudad[] rutaAleatoria() {
 
         Ciudad[] aux = new Ciudad[nCiudades];
-
+        Ciudad noRep = new Ciudad();
         for (int i = 0; i < aux.Length; i++) {
-            aux[i] = ciudadAleatoria();
+            noRep= ciudadAleatoria();
+            if (!pertenece(noRep, aux))
+            {
+                aux[i] = noRep;
+            }
+            else {
+                i--;
+            }
         }
 
         return aux;
     }
+
+    public bool pertenece(Ciudad c, Ciudad[] aux) {
+
+        for (int i = 0; i < aux.Length; i++)
+        {
+            if (aux[i] != null) {
+                if (aux[i].id == c.id) {
+                    return true;
+                }
+            }
+        }
+
+            return false;
+    }
+
+    public int getNCiudades() {
+        return nCiudades;
+    }
+
 }

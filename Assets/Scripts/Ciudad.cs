@@ -6,6 +6,7 @@ using UnityEngine;
 public class Ciudad : ScriptableObject
 {
 
+    public int id;
     public string nombre;
     public string desc;
     public Vector2 position;

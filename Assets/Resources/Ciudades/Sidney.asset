@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6651fe8ab5ddf934bb93f2f96b50059f, type: 3}
   m_Name: Sidney
   m_EditorClassIdentifier: 
+  id: 5
   nombre: Sidney
   desc: fafadfasdfas
-  position: {x: 7.45, y: -2.25}
+  position: {x: 7.45, y: -1.8}
   pista: Pista para Sidney
   activo: 0
   meridiano: 0

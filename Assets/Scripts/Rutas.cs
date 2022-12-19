@@ -19,6 +19,7 @@ public class Rutas : MonoBehaviour
     public Ciudad[] ruta1;
     public Ciudad[] ruta2;
     public Ciudad[] aleatoria;
+    public Ciudad[] jugando;
 
     [Header("Informacion de Rutas")]
     [SerializeField] private int nRutas;
@@ -43,6 +44,7 @@ public class Rutas : MonoBehaviour
         }
         else {
             createRuta();
+            rutaElegida = -1;
         }
     }
 
@@ -63,11 +65,13 @@ public class Rutas : MonoBehaviour
             {
                 ruta1[0].activo = true;
                 PinToMap(ruta1);
+                jugando = ruta1;
             }
             else if (a == 1)
             {
                 ruta2[0].activo = true;
                 PinToMap(ruta2);
+                jugando = ruta2;
             }
 
             infoCiudad.SetActive(false);
@@ -81,10 +85,19 @@ public class Rutas : MonoBehaviour
         aleatoria = gameObject.GetComponent<Datos>().rutaAleatoria(); //crear la ruta de 0
         aleatoria[0].activo = true;
         PinToMap(aleatoria);
+        jugando = aleatoria;
         infoCiudad.SetActive(false);
         pistaCiudad();
-}
+    }
 
+    public void nextCity() {
+        nCiudad++;
+        //ruta aleatoria
+        if (nCiudad == gameObject.GetComponent<Datos>().getNCiudades()) {
+            Debug.Log("ACABASTE LA RUTA");
+        }
+        
+    }
 
     //desactiva ruta 1 y 2
     void DesactivarRutas() {
@@ -207,12 +220,21 @@ public class Rutas : MonoBehaviour
     }
 
     public void ViajarCiudad() {
-        for (int i = 0; i < pins.Count; i++) {
+        for (int i = 0; i < pins.Count; i++)
+        {
             Pin p = pins[i].GetComponent<Pin>();
-            if (p.pinClicado) {
-                Debug.Log(p.ciudad);
-                gameObject.GetComponent<Global>().Viajar(p.ciudad);
-                
+            if (p.pinClicado) { 
+                if (p.ciudad.id == jugando[nCiudad].id)
+                {
+                    Debug.Log(p.ciudad);
+                    gameObject.GetComponent<Global>().Viajar(p.ciudad);
+                    return;
+                }
+                else
+                {
+                    Debug.Log("Ciudad Erronea");
+                    return;
+                }
             }
         }
     }

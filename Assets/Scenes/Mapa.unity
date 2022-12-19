@@ -2026,6 +2026,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3487dcb6b1f1a084da59a7f047aebe93, type: 2}
   - {fileID: 11400000, guid: 4dfa77f6f5377ed41849ecca59136525, type: 2}
   - {fileID: 11400000, guid: 44db0705577e655449b353dae50396e6, type: 2}
+  aleatoria: []
   nRutas: 0
   rutaElegida: 0
   nCiudad: 0
@@ -2135,6 +2136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ciudades: []
   viajes: []
+  nCiudades: 10
 --- !u!1 &879145448
 GameObject:
   m_ObjectHideFlags: 0

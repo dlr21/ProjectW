@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6651fe8ab5ddf934bb93f2f96b50059f, type: 3}
   m_Name: RiodeJaneiro
   m_EditorClassIdentifier: 
+  id: 4
   nombre: "R\xEDo de Janeiro"
   desc: fafadfasdfas
-  position: {x: -2.18, y: -1.5}
+  position: {x: -2.18, y: -1.1}
   pista: "Pista para R\xEDo de Janeiro"
   activo: 0
   meridiano: 0
