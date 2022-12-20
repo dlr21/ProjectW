@@ -13,9 +13,9 @@ public class infoCiudad : MonoBehaviour
 
     public void activar(Ciudad c) {
         if (c) { 
-        nombreCiudad.GetComponent<TextMeshProUGUI>().text = c.nombre.ToString();
-        descCiudad.GetComponent<TextMeshProUGUI>().text = c.desc.ToString();
-        imagCiudad.GetComponent<Image>().sprite = c.imagen;
+            nombreCiudad.GetComponent<TextMeshProUGUI>().text = c.nombre.ToString();
+            descCiudad.GetComponent<TextMeshProUGUI>().text = c.desc.ToString();
+            imagCiudad.GetComponent<Image>().sprite = c.imagen;
         }
         gameObject.SetActive(true);
     }

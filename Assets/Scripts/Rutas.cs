@@ -37,15 +37,18 @@ public class Rutas : MonoBehaviour
 
     void pintarRuta(bool cod)
     {
+        DesactivarRutas();
         if (cod)
         {
-            rutaElegida = RandomRuta();
             SelectRuta(rutaElegida);
         }
         else {
             createRuta();
             rutaElegida = -1;
         }
+        jugando[0].activo = true;
+        Debug.Log("Activo "+ jugando[0].nombre+ jugando[0].activo);
+        pistaCiudad();
     }
 
     public int RandomRuta()
@@ -63,19 +66,15 @@ public class Rutas : MonoBehaviour
             rutaElegida = a;
             if (a == 0)
             {
-                ruta1[0].activo = true;
                 PinToMap(ruta1);
                 jugando = ruta1;
             }
             else if (a == 1)
             {
-                ruta2[0].activo = true;
                 PinToMap(ruta2);
                 jugando = ruta2;
             }
-
             infoCiudad.SetActive(false);
-            pistaCiudad();
         }
     }
 
@@ -83,11 +82,9 @@ public class Rutas : MonoBehaviour
         BorrarRuta();
         rutaElegida = 99;
         aleatoria = gameObject.GetComponent<Datos>().rutaAleatoria(); //crear la ruta de 0
-        aleatoria[0].activo = true;
         PinToMap(aleatoria);
         jugando = aleatoria;
         infoCiudad.SetActive(false);
-        pistaCiudad();
     }
 
     public void nextCity() {
@@ -101,12 +98,8 @@ public class Rutas : MonoBehaviour
 
     //desactiva ruta 1 y 2
     void DesactivarRutas() {
-        for (int i = 0; i < ruta1.Length; i++) {
-            ruta1[i].activo = false;
-        }
-        for (int i = 0; i < ruta1.Length; i++)
-        {
-            ruta2[i].activo = false;
+        for (int i = 0; i < jugando.Length; i++) {
+            jugando[i].activo = false;
         }
         infoCiudad.SetActive(true);
     }
@@ -144,7 +137,7 @@ public class Rutas : MonoBehaviour
     {
         rutaElegida = CodRuta(s);
         if (rutaElegida == -1) return false;
-        SelectRuta(rutaElegida);
+        pintarRuta(true);
         return true;
     }
 
@@ -211,9 +204,9 @@ public class Rutas : MonoBehaviour
     }
 
     public void pistaCiudad() {
-        for (int i = 0; i < ruta1.Length; i++) {
-            if (ruta1[i].activo) {
-                pistaText.GetComponent<TMP_Text>().text = ruta1[i].pista;
+        for (int i = 0; i < jugando.Length; i++) {
+            if (jugando[i].activo) {
+                pistaText.GetComponent<TMP_Text>().text = jugando[i].pista;
                 return;
             }
         }

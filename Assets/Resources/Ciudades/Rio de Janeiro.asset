@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6651fe8ab5ddf934bb93f2f96b50059f, type: 3}
-  m_Name: Tokio1
+  m_Name: Rio de Janeiro
   m_EditorClassIdentifier: 
-  id: 7
-  nombre: Tokio
+  id: 4
+  nombre: "R\xEDo de Janeiro"
   desc: fafadfasdfas
-  position: {x: 7.45, y: -2.25}
-  pista: Pista para Sidney
+  position: {x: -2.18, y: -1.1}
+  pista: "Pista para R\xEDo de Janeiro"
   activo: 0
   meridiano: 0
-  imagen: {fileID: 21300000, guid: f6804cc5be791b74bb9e62b060f51315, type: 3}
+  imagen: {fileID: 21300000, guid: 46c0cd922731cb24a9ae983ecff1821e, type: 3}

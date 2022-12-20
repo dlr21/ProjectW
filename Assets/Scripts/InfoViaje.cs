@@ -24,11 +24,16 @@ public class InfoViaje : MonoBehaviour
     private Image bg;
     private bool select;
 
+    [Header("Content")]
+    public GameObject content;
+    private bool dragContent;
+
     // Start is called before the first frame update
     void Start()
     {
 
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        content = transform.parent.gameObject;
 
         viajes = gameManager.GetComponent<Viajes>();
         viajes.BotonViajar();
@@ -78,12 +83,21 @@ public class InfoViaje : MonoBehaviour
         }
     }
 
-    public void noRaycast() {
-        gameObject.GetComponent<Image>().raycastTarget = false;
+    public void beginDrag() {
+        dragContent = true;
+        Debug.Log("begin");
     }
 
-    public void siRaycast()
+    public void contentDrag() {
+        Vector3 mouseDirection = new Vector3(0, Input.mousePosition.y, 0).normalized;
+        content.transform.Translate(mouseDirection  * Time.deltaTime);
+        Debug.Log("DRAG");
+    }
+
+    public void endDrag()
     {
+        dragContent = false;
         gameObject.GetComponent<Image>().raycastTarget = true;
+        Debug.Log("end");
     }
 }

@@ -21,7 +21,7 @@ public class Datos : MonoBehaviour
 
     public Ciudad ciudadAleatoria()
     {
-        int a = Random.Range(0, ciudades.Count - 1);
+        int a = Random.Range(0, ciudades.Count);
         Ciudad c = ciudades[a];
         return c;
     }

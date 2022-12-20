@@ -2021,12 +2021,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c7ac29f9cdad6ec4d97c415aca741a3a, type: 2}
   - {fileID: 11400000, guid: d3931da4e21809f4c9c6ee96df0430e8, type: 2}
   - {fileID: 11400000, guid: 4c5361f39253d784f9c694d2e2227bc9, type: 2}
+  - {fileID: 11400000, guid: bc7c95e54e7d6a74b86026b4018acaa4, type: 2}
+  - {fileID: 11400000, guid: a7b9e8df864dc2346a9eccd85470d8b7, type: 2}
+  - {fileID: 11400000, guid: 4c18a71bb26cd8748bfd3d823a1ebd07, type: 2}
+  - {fileID: 11400000, guid: 44db0705577e655449b353dae50396e6, type: 2}
+  - {fileID: 11400000, guid: 35b63b9b2ac5e6c458195cfd771d6880, type: 2}
+  - {fileID: 11400000, guid: fe542a8660909aa41ab4c6940f2e4bd4, type: 2}
   ruta2:
-  - {fileID: 11400000, guid: d3931da4e21809f4c9c6ee96df0430e8, type: 2}
+  - {fileID: 11400000, guid: 0d0dbd21a52faa74daccde9ebf4f5e67, type: 2}
   - {fileID: 11400000, guid: 3487dcb6b1f1a084da59a7f047aebe93, type: 2}
   - {fileID: 11400000, guid: 4dfa77f6f5377ed41849ecca59136525, type: 2}
   - {fileID: 11400000, guid: 44db0705577e655449b353dae50396e6, type: 2}
+  - {fileID: 11400000, guid: d3931da4e21809f4c9c6ee96df0430e8, type: 2}
+  - {fileID: 11400000, guid: 4c5361f39253d784f9c694d2e2227bc9, type: 2}
+  - {fileID: 11400000, guid: fcfff618412099f40a09678c2d9bbf68, type: 2}
+  - {fileID: 11400000, guid: fe542a8660909aa41ab4c6940f2e4bd4, type: 2}
+  - {fileID: 11400000, guid: 44db0705577e655449b353dae50396e6, type: 2}
+  - {fileID: 11400000, guid: 44db0705577e655449b353dae50396e6, type: 2}
   aleatoria: []
+  jugando: []
   nRutas: 0
   rutaElegida: 0
   nCiudad: 0
