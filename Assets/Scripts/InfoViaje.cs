@@ -70,8 +70,8 @@ public class InfoViaje : MonoBehaviour
     public void setViaje(Viaje viaje) {
         v = viaje;
 
-        ori.GetComponent<TextMeshProUGUI>().text = v.origen.nombre;
-        dest.GetComponent<TextMeshProUGUI>().text = v.getCiudad().nombre;
+        ori.GetComponent<TextMeshProUGUI>().text = v.getOrigen().nombre;
+        dest.GetComponent<TextMeshProUGUI>().text = v.getDestino().nombre;
         infoV.GetComponent<TextMeshProUGUI>().text = v.infoV;
         precioV.GetComponent<TextMeshProUGUI>().text = v.getVueloPrecio().ToString();
         precioDias.GetComponent<TextMeshProUGUI>().text = v.precioDiario.ToString();

@@ -64,4 +64,8 @@ public class Global : MonoBehaviour
         return viajarDesde;
     }
 
+    public void setCiudadDesde(Ciudad c) {
+        viajarDesde=c;
+    }
+
 }

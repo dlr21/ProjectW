@@ -18,6 +18,22 @@ public class Datos : MonoBehaviour
         viajes = Resources.LoadAll<Viaje>("Viajes").ToList();
     }
 
+    public List<Viaje> viajesPosbles(Ciudad origen, Ciudad destino) {
+        List<Viaje> v = new List<Viaje>();
+
+        for (int i = 0; i < viajes.Count; i++) {
+            if (viajes[i] != null)
+            {
+                if (viajes[i].getDestino().id == destino.id && viajes[i].getOrigen().id == origen.id)
+                {
+                    v.Add(viajes[i]);
+                }
+            }
+        }
+
+
+        return v;
+    }
 
     public Ciudad ciudadAleatoria()
     {

@@ -181,22 +181,11 @@ public class Rutas : MonoBehaviour
     }
 
     public void siguienteCiudad() {
-        if (rutaElegida == 1)
-        {
-            ruta1[nCiudad].activo = false;
-            nCiudad++;
-            ruta1[nCiudad].activo = true;
 
-        }
-        else if (rutaElegida == 2)
-        {
-            ruta2[nCiudad].activo = false;
-            nCiudad++;
-            ruta2[nCiudad].activo = true;
-        }
-        ruta1[nCiudad].activo = false;
+        jugando[nCiudad].activo = false;
         nCiudad++;
-        ruta1[nCiudad].activo = true;
+        jugando[nCiudad].activo = true;
+
     }
 
     public void primeraCiudad() {

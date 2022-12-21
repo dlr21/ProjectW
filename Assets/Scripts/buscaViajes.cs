@@ -15,7 +15,6 @@ public class buscaViajes : MonoBehaviour
     public Viaje auxiliar2;//de momento
     private Vector2 v = new Vector3(0,200);
 
-
     public Viajes viajes;
 
     private void Start()
@@ -23,8 +22,11 @@ public class buscaViajes : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GameManager");
         viajes = gm.GetComponent<Viajes>();
         buscadorV(gm.GetComponent<Global>().getViajarA(), gm.GetComponent<Global>().getViajarDesde());
+        
+    }
 
-        //LayoutRebuilder.ForceRebuildLayoutImmediate(this.GetComponentInChildren<Transform>() as RectTransform);
+    public List<Viaje> coincidenV(Ciudad ori, Ciudad dest) {
+        return gm.GetComponent<Datos>().viajesPosbles(ori, dest);
     }
 
     //
@@ -33,6 +35,16 @@ public class buscaViajes : MonoBehaviour
     //
 
     public void buscadorV(Ciudad ori, Ciudad dest) {
+
+        List<Viaje> posibles =coincidenV(ori, dest);
+
+        for (int i = 0; i < posibles.Count; i++) {
+            aux = Instantiate(viaje, content.transform) as GameObject;
+            aux.GetComponent<RectTransform>().anchoredPosition = v;
+            aux.GetComponent<InfoViaje>().setViaje(auxiliar);
+            viajes.addViaje(aux);
+            v.y = v.y - 500;
+        }
         
         aux = Instantiate(viaje, content.transform) as GameObject;
         aux.GetComponent<RectTransform>().anchoredPosition = v;

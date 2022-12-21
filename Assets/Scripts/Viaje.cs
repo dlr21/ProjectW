@@ -12,7 +12,7 @@ public class Viaje : ScriptableObject
     [SerializeField] private int precioVueloDistancia;
     public string infoV;
     public int precioDiario;
-    public Ciudad origen;
+    [SerializeField] private Ciudad origen;
 
     public int getVueloPrecio() {
         int tot = 0;
@@ -26,8 +26,28 @@ public class Viaje : ScriptableObject
         return tot;
     }
 
-    public Ciudad getCiudad() {
+    public Ciudad getDestino() {
         return destino;
+    }
+
+    public Ciudad getOrigen()
+    {
+        return origen;
+    }
+
+    public void setDestino(Ciudad c)
+    {
+        destino=c;
+    }
+
+    public void setOrigen(Ciudad c)
+    {
+        origen = c; 
+    }
+
+    public void setVueloPrecioDistancia(int c)
+    {
+        precioVueloDistancia = c;
     }
 
     //[Header("Companyia")]
