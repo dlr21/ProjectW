@@ -10,9 +10,7 @@ public class buscaViajes : MonoBehaviour
     public GameObject content;
 
     private GameObject aux;//auxiliar para usar viaje tras viaje
-    //viajes ejemplo
-    public Viaje auxiliar;//de momento
-    public Viaje auxiliar2;//de momento
+
     private Vector2 v = new Vector3(0,200);
 
     public Viajes viajes;
@@ -21,7 +19,7 @@ public class buscaViajes : MonoBehaviour
     {
         gm = GameObject.FindGameObjectWithTag("GameManager");
         viajes = gm.GetComponent<Viajes>();
-        buscadorV(gm.GetComponent<Global>().getViajarA(), gm.GetComponent<Global>().getViajarDesde());
+        buscadorV(gm.GetComponent<Global>().getViajarDesde(), gm.GetComponent<Global>().getViajarA());
         
     }
 
@@ -41,35 +39,11 @@ public class buscaViajes : MonoBehaviour
         for (int i = 0; i < posibles.Count; i++) {
             aux = Instantiate(viaje, content.transform) as GameObject;
             aux.GetComponent<RectTransform>().anchoredPosition = v;
-            aux.GetComponent<InfoViaje>().setViaje(auxiliar);
+            aux.GetComponent<InfoViaje>().setViaje(posibles[i]);
             viajes.addViaje(aux);
             v.y = v.y - 500;
         }
         
-        aux = Instantiate(viaje, content.transform) as GameObject;
-        aux.GetComponent<RectTransform>().anchoredPosition = v;
-        aux.GetComponent<InfoViaje>().setViaje(auxiliar);
-        
-        viajes.addViaje(aux);
-        v.y = v.y - 500;
-
-        aux = Instantiate(viaje, content.transform) as GameObject;
-        aux.GetComponent<RectTransform>().anchoredPosition = v;
-        aux.GetComponent<InfoViaje>().setViaje(auxiliar2);
-        viajes.addViaje(aux);
-        v.y = v.y - 500;
-
-        aux = Instantiate(viaje, content.transform) as GameObject;
-        aux.GetComponent<RectTransform>().anchoredPosition = v;
-        aux.GetComponent<InfoViaje>().setViaje(auxiliar);
-        viajes.addViaje(aux);
-        v.y = v.y - 500;
-
-        aux = Instantiate(viaje, content.transform) as GameObject;
-        aux.GetComponent<RectTransform>().anchoredPosition = v;
-        aux.GetComponent<InfoViaje>().setViaje(auxiliar2);
-        viajes.addViaje(aux);
-
     }
 
     public void BotonViajar()

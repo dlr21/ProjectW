@@ -15,15 +15,7 @@ public class Viaje : ScriptableObject
     [SerializeField] private Ciudad origen;
 
     public int getVueloPrecio() {
-        int tot = 0;
-
-        //distancia origen destino, mapa separado en partes y depende de en que parte este es la distancia
-        int distancia = destino.meridiano - origen.meridiano;
-        distancia = Mathf.Abs(distancia);
-
-        tot = precioVueloDistancia * distancia;
-
-        return tot;
+        return precioVueloDistancia;
     }
 
     public Ciudad getDestino() {
@@ -48,6 +40,11 @@ public class Viaje : ScriptableObject
     public void setVueloPrecioDistancia(int c)
     {
         precioVueloDistancia = c;
+    }
+
+    public void setPrecioDiario(int c)
+    {
+        precioDiario = c;
     }
 
     //[Header("Companyia")]

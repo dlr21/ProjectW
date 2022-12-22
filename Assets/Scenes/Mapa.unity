@@ -1312,6 +1312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   c: {fileID: 11400000, guid: 3487dcb6b1f1a084da59a7f047aebe93, type: 2}
+  gm: {fileID: 745310016}
+  viajes: []
 --- !u!1 &539225427
 GameObject:
   m_ObjectHideFlags: 0

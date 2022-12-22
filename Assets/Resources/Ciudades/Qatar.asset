@@ -18,5 +18,5 @@ MonoBehaviour:
   position: {x: 2.55, y: 1.65}
   pista: Pista para Qatar
   activo: 0
-  meridiano: 0
+  meridiano: 3
   imagen: {fileID: 21300000, guid: 99d70a85c4266154dac959b68e5d1c99, type: 3}

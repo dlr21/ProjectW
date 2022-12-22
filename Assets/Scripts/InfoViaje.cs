@@ -67,14 +67,16 @@ public class InfoViaje : MonoBehaviour
         select = false;
     }
 
-    public void setViaje(Viaje viaje) {
-        v = viaje;
-
-        ori.GetComponent<TextMeshProUGUI>().text = v.getOrigen().nombre;
-        dest.GetComponent<TextMeshProUGUI>().text = v.getDestino().nombre;
-        infoV.GetComponent<TextMeshProUGUI>().text = v.infoV;
-        precioV.GetComponent<TextMeshProUGUI>().text = v.getVueloPrecio().ToString();
-        precioDias.GetComponent<TextMeshProUGUI>().text = v.precioDiario.ToString();
+    public void setViaje(Viaje viaje)
+    {
+        if (viaje != null) {
+            v = viaje;
+            ori.GetComponent<TextMeshProUGUI>().text = v.getOrigen().nombre;
+            dest.GetComponent<TextMeshProUGUI>().text = v.getDestino().nombre;
+            infoV.GetComponent<TextMeshProUGUI>().text = v.infoV;
+            precioV.GetComponent<TextMeshProUGUI>().text = v.getVueloPrecio().ToString();
+            precioDias.GetComponent<TextMeshProUGUI>().text = v.precioDiario.ToString();
+        }
     }
 
     public void selectNdias() {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AlicanteSidney 2
   m_EditorClassIdentifier: 
   destino: {fileID: 11400000, guid: 4dfa77f6f5377ed41849ecca59136525, type: 2}
-  precioVueloDistancia: 200
-  infoV: Vuelo Alicante Sidney
-  precioDiario: 10
+  precioVueloDistancia: 579
+  infoV: 
+  precioDiario: 9
   origen: {fileID: 11400000, guid: 3487dcb6b1f1a084da59a7f047aebe93, type: 2}

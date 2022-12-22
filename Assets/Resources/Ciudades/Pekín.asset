@@ -18,5 +18,5 @@ MonoBehaviour:
   position: {x: 5.75, y: 2.5}
   pista: "Pista para Pek\xEDn"
   activo: 1
-  meridiano: 0
+  meridiano: 8
   imagen: {fileID: 21300000, guid: 3368975dd781df341a5eddde7a392eb0, type: 3}

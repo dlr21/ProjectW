@@ -18,5 +18,5 @@ MonoBehaviour:
   position: {x: 0.55, y: 3}
   pista: Pista para Berlin
   activo: 0
-  meridiano: 0
+  meridiano: 1
   imagen: {fileID: 21300000, guid: 83273051ae186954188511cd50c70018, type: 3}

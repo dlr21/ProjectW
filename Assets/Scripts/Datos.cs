@@ -19,6 +19,7 @@ public class Datos : MonoBehaviour
     }
 
     public List<Viaje> viajesPosbles(Ciudad origen, Ciudad destino) {
+
         List<Viaje> v = new List<Viaje>();
 
         for (int i = 0; i < viajes.Count; i++) {
@@ -30,7 +31,6 @@ public class Datos : MonoBehaviour
                 }
             }
         }
-
 
         return v;
     }

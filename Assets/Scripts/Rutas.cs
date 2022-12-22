@@ -208,7 +208,6 @@ public class Rutas : MonoBehaviour
             if (p.pinClicado) { 
                 if (p.ciudad.id == jugando[nCiudad].id)
                 {
-                    Debug.Log(p.ciudad);
                     gameObject.GetComponent<Global>().Viajar(p.ciudad);
                     return;
                 }
