@@ -78,4 +78,11 @@ public class Datos : MonoBehaviour
         return nCiudades;
     }
 
+    public List<Preguntas> cargarPreguntas(Ciudad c) {
+        List<Preguntas> res = new List<Preguntas>();
+        //obtener preguntas
+
+        return res;
+    }
+
 }

@@ -28,6 +28,9 @@ public class Global : MonoBehaviour
         }*/
     }
 
+    /// <summary>
+    /// Menu opciones
+    /// </summary>
     public void OptionButton() {
         menuOpciones.SetActive(true);
     }
@@ -49,12 +52,16 @@ public class Global : MonoBehaviour
         }
     }
 
+    //elegimos viajar a una ciudad
     public void Viajar(Ciudad c) {
 
         viajarA = c;
         SceneManager.LoadScene("Tienda");
     }
 
+    /// <summary>
+    /// get set
+    /// </summary>
     public Ciudad getViajarA() {
         return viajarA;
     }

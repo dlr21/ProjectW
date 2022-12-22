@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tienda.unity
     guid: 71d4118e3daedfc438a7475d912d2c45
+  - enabled: 1
+    path: Assets/Scenes/Ciudades/Alicante.unity
+    guid: 04cef9e966f7848449940267eb32f22c
   m_configObjects: {}

@@ -36,6 +36,8 @@ public class Viajes : MonoBehaviour
         }
         else {
             Debug.Log("Viajando uouououou");
+            gameManager.GetComponent<Global>().setCiudadDesde(v_seleccionado.getDestino());
+            SceneManager.LoadScene("Alicante");
             //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
         }
 
@@ -43,7 +45,6 @@ public class Viajes : MonoBehaviour
 
     //al confirmar el viaje con el boton viajar
     public void viajando() {
-
         pl.restWallet(precioViaje(v_seleccionado));
     }
 
@@ -90,7 +91,6 @@ public class Viajes : MonoBehaviour
 
     public void DesSelectAll()
     {
-        Debug.Log("DESseleccionado ");
         foreach (GameObject objet in viajes)
         {
             objet.GetComponent<InfoViaje>().ColorDesSelect();
