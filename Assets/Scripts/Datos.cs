@@ -8,6 +8,7 @@ public class Datos : MonoBehaviour
 
     public List<Ciudad> ciudades;
     public List<Viaje> viajes;
+    public List<Examen> examenes;
 
     [SerializeField]private int nCiudades;
 
@@ -16,6 +17,7 @@ public class Datos : MonoBehaviour
     {
         ciudades = Resources.LoadAll<Ciudad>("Ciudades").ToList();
         viajes = Resources.LoadAll<Viaje>("Viajes").ToList();
+        examenes = Resources.LoadAll<Examen>("Examenes").ToList();
     }
 
     public List<Viaje> viajesPosbles(Ciudad origen, Ciudad destino) {
@@ -78,11 +80,16 @@ public class Datos : MonoBehaviour
         return nCiudades;
     }
 
-    public List<Preguntas> cargarPreguntas(Ciudad c) {
-        List<Preguntas> res = new List<Preguntas>();
-        //obtener preguntas
-
-        return res;
+    public Examen cargarPreguntas(Ciudad c) {
+        for (int i = 0; i < examenes.Count; i++)
+        {
+            if (examenes[i].ciudad.id == c.id)
+            {
+                return examenes[i];
+            }
+        }
+        Debug.Log("examen NO encontrado");
+        return null;
     }
 
 }

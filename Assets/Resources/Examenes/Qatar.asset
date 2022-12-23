@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: Alicante
-  m_EditorClassIdentifier: Assembly-CSharp::Examen
-  ciudad: {fileID: 11400000, guid: 3487dcb6b1f1a084da59a7f047aebe93, type: 2}
+  m_Script: {fileID: 11500000, guid: 484a981626424d043bd478ac42cb925a, type: 3}
+  m_Name: Qatar
+  m_EditorClassIdentifier: 
+  ciudad: {fileID: 11400000, guid: a7b9e8df864dc2346a9eccd85470d8b7, type: 2}
   preguntas:
   - opciones:
     - Opcion 1
@@ -33,7 +33,7 @@ MonoBehaviour:
     - Opcion 2
     - Opcion 3
     - Opcion 4
-    pregunta: Pregunta 2
+    pregunta: Pregunta 3
     correcta: 0
   - opciones:
     - Opcion 1

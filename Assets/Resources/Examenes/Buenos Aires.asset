@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484a981626424d043bd478ac42cb925a, type: 3}
+  m_Name: Buenos Aires
+  m_EditorClassIdentifier: 
+  ciudad: {fileID: 11400000, guid: fcfff618412099f40a09678c2d9bbf68, type: 2}
+  preguntas:
+  - opciones:
+    - Opcion 1
+    - Opcion 2
+    - Opcion 3
+    - Opcion 4
+    pregunta: Pregunta 1
+    correcta: 0
+  - opciones:
+    - Opcion 1
+    - Opcion 2
+    - Opcion 3
+    - Opcion 4
+    pregunta: Pregunta 2
+    correcta: 0
+  - opciones:
+    - Opcion 1
+    - Opcion 2
+    - Opcion 3
+    - Opcion 4
+    pregunta: Pregunta 3
+    correcta: 0
+  - opciones:
+    - Opcion 1
+    - Opcion 2
+    - Opcion 3
+    - Opcion 4
+    pregunta: Pregunta 4
+    correcta: 0
+  - opciones:
+    - Opcion 1
+    - Opcion 2
+    - Opcion 3
+    - Opcion 4
+    pregunta: Pregunta 5
+    correcta: 0
+  - opciones:
+    - Opcion 1
+    - Opcion 2
+    - Opcion 3
+    - Opcion 4
+    pregunta: Pregunta 6
+    correcta: 0
+  - opciones:
+    - Opcion 1
+    - Opcion 2
+    - Opcion 3
+    - Opcion 4
+    pregunta: Pregunta 7
+    correcta: 0
+  - opciones:
+    - Opcion 1
+    - Opcion 2
+    - Opcion 3
+    - Opcion 4
+    pregunta: Pregunta 8
+    correcta: 0
+  - opciones:
+    - Opcion 1
+    - Opcion 2
+    - Opcion 3
+    - Opcion 4
+    pregunta: Pregunta 9
+    correcta: 0
+  - opciones:
+    - Opcion 1
+    - Opcion 2
+    - Opcion 3
+    - Opcion 4
+    pregunta: Pregunta 10
+    correcta: 0
