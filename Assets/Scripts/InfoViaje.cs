@@ -26,7 +26,7 @@ public class InfoViaje : MonoBehaviour
 
     [Header("Content")]
     public GameObject content;
-    private bool dragContent;
+    //private bool dragContent;
 
     // Start is called before the first frame update
     void Start()
@@ -86,7 +86,7 @@ public class InfoViaje : MonoBehaviour
     }
 
     public void beginDrag() {
-        dragContent = true;
+        //dragContent = true;
         Debug.Log("begin");
     }
 
@@ -98,7 +98,7 @@ public class InfoViaje : MonoBehaviour
 
     public void endDrag()
     {
-        dragContent = false;
+        //dragContent = false;
         gameObject.GetComponent<Image>().raycastTarget = true;
         Debug.Log("end");
     }

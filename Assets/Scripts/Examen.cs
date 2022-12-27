@@ -10,6 +10,7 @@ public class Preguntas
     public string pregunta;
 
     public int correcta;
+
 }
 
 
@@ -20,6 +21,8 @@ public class Examen : ScriptableObject
     public Ciudad ciudad;
 
     public List<Preguntas> preguntas=new List<Preguntas>();
+
+    public int nPregunta;
 
 }
 

@@ -15,72 +15,73 @@ MonoBehaviour:
   ciudad: {fileID: 11400000, guid: c7ac29f9cdad6ec4d97c415aca741a3a, type: 2}
   preguntas:
   - opciones:
-    - Opcion 1
-    - Opcion 2
-    - Opcion 3
-    - Opcion 4
-    pregunta: Pregunta 1
+    - Berlin 1
+    - Berlin 2
+    - Berlin 3
+    - Berlin 4
+    pregunta: Pregunta 1 Berlin
     correcta: 0
   - opciones:
-    - Opcion 1
-    - Opcion 2
-    - Opcion 3
-    - Opcion 4
-    pregunta: Pregunta 2
+    - Berlin 1
+    - Berlin 2
+    - Berlin 3
+    - Berlin 4
+    pregunta: Pregunta 2 Berlin
     correcta: 0
   - opciones:
-    - Opcion 1
-    - Opcion 2
-    - Opcion 3
-    - Opcion 4
-    pregunta: Pregunta 3
+    - Berlin 1
+    - Berlin 2
+    - Berlin 3
+    - Berlin 4
+    pregunta: Pregunta 3 Berlin
     correcta: 0
   - opciones:
-    - Opcion 1
-    - Opcion 2
-    - Opcion 3
-    - Opcion 4
-    pregunta: Pregunta 4
+    - Berlin 1
+    - Berlin 2
+    - Berlin 3
+    - Berlin 4
+    pregunta: Pregunta 4 Berlin
     correcta: 0
   - opciones:
-    - Opcion 1
-    - Opcion 2
-    - Opcion 3
-    - Opcion 4
-    pregunta: Pregunta 5
+    - Berlin 1
+    - Berlin 2
+    - Berlin 3
+    - Berlin 4
+    pregunta: Pregunta 5 Berlin
     correcta: 0
   - opciones:
-    - Opcion 1
-    - Opcion 2
-    - Opcion 3
-    - Opcion 4
-    pregunta: Pregunta 6
+    - Berlin 1
+    - Berlin 2
+    - Berlin 3
+    - Berlin 4
+    pregunta: Pregunta 6 Berlin
     correcta: 0
   - opciones:
-    - Opcion 1
-    - Opcion 2
-    - Opcion 3
-    - Opcion 4
-    pregunta: Pregunta 7
+    - Berlin 1
+    - Berlin 2
+    - Berlin 3
+    - Berlin 4
+    pregunta: Pregunta 7 Berlin
     correcta: 0
   - opciones:
-    - Opcion 1
-    - Opcion 2
-    - Opcion 3
-    - Opcion 4
-    pregunta: Pregunta 8
+    - Berlin 1
+    - Berlin 2
+    - Berlin 3
+    - Berlin 4
+    pregunta: Pregunta 8 Berlin
     correcta: 0
   - opciones:
-    - Opcion 1
-    - Opcion 2
-    - Opcion 3
-    - Opcion 4
-    pregunta: Pregunta 9
+    - Berlin 1
+    - Berlin 2
+    - Berlin 3
+    - Berlin 4
+    pregunta: Pregunta 9 Berlin
     correcta: 0
   - opciones:
-    - Opcion 1
-    - Opcion 2
-    - Opcion 3
-    - Opcion 4
-    pregunta: Pregunta 10
+    - Berlin 1
+    - Berlin 2
+    - Berlin 3
+    - Berlin 4
+    pregunta: Pregunta 10 Berlin
     correcta: 0
+  nPregunta: 0

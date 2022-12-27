@@ -18,6 +18,8 @@ public class Datos : MonoBehaviour
         ciudades = Resources.LoadAll<Ciudad>("Ciudades").ToList();
         viajes = Resources.LoadAll<Viaje>("Viajes").ToList();
         examenes = Resources.LoadAll<Examen>("Examenes").ToList();
+        //forzar resolucion
+        Screen.SetResolution(1920,1080,true);
     }
 
     public List<Viaje> viajesPosbles(Ciudad origen, Ciudad destino) {

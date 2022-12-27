@@ -1209,7 +1209,6 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1299,21 +1298,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
---- !u!114 &519420034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a8f0858eb52c2d42a38b3e072bbf00d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  c: {fileID: 11400000, guid: 3487dcb6b1f1a084da59a7f047aebe93, type: 2}
-  gm: {fileID: 745310016}
-  viajes: []
 --- !u!1 &539225427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,6 +2149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ciudades: []
   viajes: []
+  examenes: []
   nCiudades: 10
 --- !u!1 &879145448
 GameObject:
@@ -3585,7 +3570,6 @@ GameObject:
   - component: {fileID: 1488299799}
   - component: {fileID: 1488299798}
   - component: {fileID: 1488299797}
-  - component: {fileID: 1488299800}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3642,18 +3626,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1488299800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488299796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d291eca8b053e047bb31a2a5a741f43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1517172808
 GameObject:
   m_ObjectHideFlags: 0
