@@ -13,7 +13,18 @@ public class Global : MonoBehaviour
 
     [SerializeField] private Ciudad viajarA;
     [SerializeField] private Ciudad viajarDesde;
-    
+
+    private static Global instance = null;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            return;
+        }
+        Destroy(this.gameObject);
+    }
 
     private void Start()
     {

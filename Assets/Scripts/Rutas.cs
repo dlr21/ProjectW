@@ -28,6 +28,27 @@ public class Rutas : MonoBehaviour
 
     [SerializeField] private GameObject pistaText;
 
+
+    private static Rutas instance = null;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            return;
+        }
+        else {
+            recargarRuta();
+        }
+    }
+    //intentando que al volver al  mapa la informacion sea correcta
+    void recargarRuta() {
+        PinToMap(aleatoria);
+        infoCiudad.SetActive(false);
+        pistaCiudad();
+    }
+
     private void Start()
     {
         nCiudad = 0;
@@ -89,11 +110,18 @@ public class Rutas : MonoBehaviour
 
     public void nextCity() {
         nCiudad++;
-        //ruta aleatoria
-        if (nCiudad == gameObject.GetComponent<Datos>().getNCiudades()) {
+        //segun el numero de ciudades en cada ruta, cuidado con las customs
+        if (nCiudad == gameObject.GetComponent<Datos>().getNCiudades())
+        {
             Debug.Log("ACABASTE LA RUTA");
         }
-        
+        else {
+            jugando[nCiudad].activo = false;
+            nCiudad++;
+            jugando[nCiudad].activo = true;
+        }
+
+
     }
 
     //desactiva ruta 1 y 2
@@ -180,13 +208,6 @@ public class Rutas : MonoBehaviour
         }*/
     }
 
-    public void siguienteCiudad() {
-
-        jugando[nCiudad].activo = false;
-        nCiudad++;
-        jugando[nCiudad].activo = true;
-
-    }
 
     public void primeraCiudad() {
         nCiudad = 0;
