@@ -5,21 +5,35 @@ using UnityEngine;
 
 public class Datos : MonoBehaviour
 {
-
+    [Header("Resources")]
     public List<Ciudad> ciudades;
     public List<Viaje> viajes;
     public List<Examen> examenes;
 
-    [SerializeField]private int nCiudades;
+    [Header("Ruta jugando")]
+    public Ciudad[] jugando;
+    public bool nueva;
+    [SerializeField] private int nCiudades;
+    [SerializeField] private int nCiudad;
 
-    // Awake para llamarse antes de Start en otros scripts donde se utilizan los datos
+    [Header("Viajes")]
+    [SerializeField] private Ciudad viajarA;
+    [SerializeField] private Ciudad viajarDesde;
+
     void Awake()
     {
+        nueva = true;//empieza true para tener partida nueva
         ciudades = Resources.LoadAll<Ciudad>("Ciudades").ToList();
         viajes = Resources.LoadAll<Viaje>("Viajes").ToList();
         examenes = Resources.LoadAll<Examen>("Examenes").ToList();
+        nCiudad = 0;
         //forzar resolucion
         Screen.SetResolution(1920,1080,true);
+    }
+
+    private void Start()
+    {
+        viajarDesde=ciudadAleatoria();
     }
 
     public List<Viaje> viajesPosbles(Ciudad origen, Ciudad destino) {
@@ -46,7 +60,7 @@ public class Datos : MonoBehaviour
         return c;
     }
 
-    public Ciudad[] rutaAleatoria() {
+    public void rutaAleatoria() {
 
         Ciudad[] aux = new Ciudad[nCiudades];
         Ciudad noRep = new Ciudad();
@@ -61,7 +75,8 @@ public class Datos : MonoBehaviour
             }
         }
 
-        return aux;
+         jugando=aux;
+         nueva = false;
     }
 
     public bool pertenece(Ciudad c, Ciudad[] aux) {
@@ -94,4 +109,48 @@ public class Datos : MonoBehaviour
         return null;
     }
 
+    public void nextCity()
+    {
+        jugando[nCiudad].activo = false;
+        nCiudad++;
+        //segun el numero de ciudades en cada ruta, cuidado con las customs
+        if (nCiudad == gameObject.GetComponent<Datos>().getNCiudades())
+        {
+            Debug.Log("ACABASTE LA RUTA");
+        }
+        else
+        {
+            Debug.Log("CONTINUAMOS LA RUTA");
+            //jugando[nCiudad].activo = true;
+        }
+
+    }
+
+    public void setViajarA(Ciudad c) {
+        viajarA = c;
+    }
+
+    public void setViajarDesde(Ciudad c)
+    {
+        viajarDesde = c;
+    }
+
+    public Ciudad getViajarA()
+    {
+        return viajarA;
+    }
+
+    public Ciudad getViajarDesde()
+    {
+        return viajarDesde;
+    }
+
+    public int getNciudad()
+    {
+        return nCiudad;
+    }
+
+    public void primeraCiudad() {
+        nCiudad = 0;
+    }
 }

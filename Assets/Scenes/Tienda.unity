@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -569,6 +570,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57fd40ebbbe0d3b4fbd0dad62d22f59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  datos: {fileID: 0}
+  pl: {fileID: 0}
+  botonViajar: {fileID: 285174944}
+  v_seleccionado: {fileID: 0}
+  nDias: 0
+  viajes: []
 --- !u!1 &670120710
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,12 +892,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9589cb8d7930d1c4e89765e20f7abf8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
+  datos: {fileID: 0}
   viaje: {fileID: 7654630368842259062, guid: a70d164454030ee4baad7305a1e778ab, type: 3}
   content: {fileID: 670120710}
-  auxiliar: {fileID: 11400000, guid: edcbecbeaea6ea640a2965d18d5a4769, type: 2}
-  auxiliar2: {fileID: 11400000, guid: 5b23997afbaf82c4f87bb59f74f5b0ae, type: 2}
-  viajes: {fileID: 0}
+  viajes: {fileID: 519420033}
 --- !u!114 &800047663
 MonoBehaviour:
   m_ObjectHideFlags: 0

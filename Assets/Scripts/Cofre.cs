@@ -22,14 +22,16 @@ public class Cofre : MonoBehaviour
     [SerializeField] private GameObject fallo;
     [SerializeField] private GameObject todasBien;
 
+    [SerializeField] private Datos datos;
+
     public bool pRespondida;
     public bool fin;
     // Start is called before the first frame update
     void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("GameManager");
-        ciudad = gm.GetComponent<Global>().getViajarDesde();
-        examen=gm.GetComponent<Datos>().cargarPreguntas(ciudad);
+        datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
+        ciudad = datos.getViajarDesde();
+        examen=datos.cargarPreguntas(ciudad);
         examenVisuals.SetActive(false);
         fallo.SetActive(false);
         todasBien.SetActive(false);
@@ -94,7 +96,7 @@ public class Cofre : MonoBehaviour
     }
 
     public void finVolverMapa() {
-        gm.GetComponent<Rutas>().nextCity();
+        datos.nextCity();
         SceneManager.LoadScene("Mapa");
     }
 

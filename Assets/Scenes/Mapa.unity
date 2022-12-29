@@ -390,6 +390,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &244793051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244793054}
+  - component: {fileID: 244793053}
+  - component: {fileID: 244793052}
+  m_Layer: 0
+  m_Name: Datos
+  m_TagString: Datos
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &244793052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244793051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d291eca8b053e047bb31a2a5a741f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &244793053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244793051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f282fd70efd632341a3b1cbf6e9658e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ciudades: []
+  viajes: []
+  examenes: []
+  jugando: []
+  nueva: 0
+  nCiudades: 10
+--- !u!4 &244793054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244793051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 828.0248, y: 681.46185, z: -21.731184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &247090357
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +885,7 @@ GameObject:
   - component: {fileID: 482565158}
   m_Layer: 5
   m_Name: CodigoRuta
-  m_TagString: Untagged
+  m_TagString: codigoRuta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1986,13 +2049,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 745310018}
-  - component: {fileID: 745310024}
   - component: {fileID: 745310017}
   - component: {fileID: 745310019}
   - component: {fileID: 745310020}
   - component: {fileID: 745310022}
   - component: {fileID: 745310023}
-  - component: {fileID: 745310021}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -2013,8 +2074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   go: {fileID: 8862718531164499507, guid: 39c96ae7a38767a498e4756460d74cac, type: 3}
-  infoCiudad: {fileID: 2001538106}
-  pinAux: {fileID: 1026273626}
+  infoCiudad: {fileID: 0}
+  pinAux: {fileID: 0}
   pins: []
   ruta1:
   - {fileID: 11400000, guid: 3487dcb6b1f1a084da59a7f047aebe93, type: 2}
@@ -2039,11 +2100,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 44db0705577e655449b353dae50396e6, type: 2}
   - {fileID: 11400000, guid: 44db0705577e655449b353dae50396e6, type: 2}
   aleatoria: []
-  jugando: []
   nRutas: 0
   rutaElegida: 0
   nCiudad: 0
-  pistaText: {fileID: 1942585883}
+  pistaText: {fileID: 0}
 --- !u!4 &745310018
 Transform:
   m_ObjectHideFlags: 0
@@ -2084,23 +2144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de242c85b6356e54d8cced77348760bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  codigoRuta: {fileID: 482565156}
-  menuOpciones: {fileID: 1313102414}
-  gameManager: {fileID: 745310016}
+  codigoRuta: {fileID: 0}
+  menuOpciones: {fileID: 0}
+  gameManager: {fileID: 0}
   viajarA: {fileID: 0}
   viajarDesde: {fileID: 0}
---- !u!114 &745310021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745310016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d291eca8b053e047bb31a2a5a741f43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &745310022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2129,28 +2177,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57fd40ebbbe0d3b4fbd0dad62d22f59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 745310016}
+  gameManager: {fileID: 0}
   pl: {fileID: 0}
   botonViajar: {fileID: 0}
   v_seleccionado: {fileID: 0}
   nDias: 0
   viajes: []
---- !u!114 &745310024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745310016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f282fd70efd632341a3b1cbf6e9658e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ciudades: []
-  viajes: []
-  examenes: []
-  nCiudades: 10
 --- !u!1 &879145448
 GameObject:
   m_ObjectHideFlags: 0
@@ -3183,11 +3215,11 @@ GameObject:
   - component: {fileID: 1313102415}
   m_Layer: 5
   m_Name: MenuOpciones
-  m_TagString: Untagged
+  m_TagString: menuOpciones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1313102415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4415,7 +4447,7 @@ GameObject:
   - component: {fileID: 1942585885}
   m_Layer: 5
   m_Name: TextDialogo
-  m_TagString: Untagged
+  m_TagString: pistaText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

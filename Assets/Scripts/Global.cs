@@ -10,33 +10,23 @@ public class Global : MonoBehaviour
     [SerializeField] private GameObject codigoRuta;
     [SerializeField] private GameObject menuOpciones;
     [SerializeField] private GameObject gameManager;
+    [SerializeField] private Datos datos;
 
-    [SerializeField] private Ciudad viajarA;
-    [SerializeField] private Ciudad viajarDesde;
 
-    private static Global instance = null;
-
-    void Awake()
+    void getGameobjects()
     {
-        if (instance == null)
-        {
-            instance = this;
-            return;
-        }
-        Destroy(this.gameObject);
+            codigoRuta = GameObject.FindGameObjectWithTag("codigoRuta");
+            menuOpciones = GameObject.FindGameObjectWithTag("menuOpciones");
+            menuOpciones.SetActive(false);
+            gameManager = GameObject.FindGameObjectWithTag("GameManager");
+            datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
     }
 
     private void Start()
     {
+        getGameobjects();
         //comenzar cada partida desde una ciudad distinta
-        viajarDesde = gameObject.GetComponent<Datos>().ciudadAleatoria(); 
-    }
-
-    private void Update()
-    {
-        /*if (Input.GetMouseButtonDown(0)){
-            Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        }*/
+        //if(datos.nueva)datos.ciudadAleatoria(); 
     }
 
     /// <summary>
@@ -66,24 +56,13 @@ public class Global : MonoBehaviour
     //elegimos viajar a una ciudad
     public void Viajar(Ciudad c) {
 
-        viajarA = c;
+        datos.setViajarA(c);
         SceneManager.LoadScene("Tienda");
     }
 
-    /// <summary>
-    /// get set
-    /// </summary>
-    public Ciudad getViajarA() {
-        return viajarA;
+    void activarGO() {
+        menuOpciones.SetActive(true);
     }
 
-    public Ciudad getViajarDesde()
-    {
-        return viajarDesde;
-    }
-
-    public void setCiudadDesde(Ciudad c) {
-        viajarDesde=c;
-    }
 
 }

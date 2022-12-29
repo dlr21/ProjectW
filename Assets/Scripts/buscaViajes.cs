@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class buscaViajes : MonoBehaviour
 {
-    public GameObject gm;
+
+    public Datos datos;
     public GameObject viaje;//prefab viaje
     public GameObject content;
 
@@ -17,14 +18,12 @@ public class buscaViajes : MonoBehaviour
 
     private void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("GameManager");
-        viajes = gm.GetComponent<Viajes>();
-        buscadorV(gm.GetComponent<Global>().getViajarDesde(), gm.GetComponent<Global>().getViajarA());
-        
+        datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
+        buscadorV(datos.getViajarDesde(), datos.getViajarA());
     }
 
     public List<Viaje> coincidenV(Ciudad ori, Ciudad dest) {
-        return gm.GetComponent<Datos>().viajesPosbles(ori, dest);
+        return datos.viajesPosbles(ori, dest);
     }
 
     //

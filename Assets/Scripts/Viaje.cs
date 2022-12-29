@@ -8,11 +8,13 @@ public class Viaje : ScriptableObject
 
     [Header("Atributos")]
     [SerializeField] private Ciudad destino;
+    [SerializeField] private Ciudad origen;
     //[SerializeField]private Sprite logo;//imagen de vista en el viaje
     [SerializeField] private int precioVueloDistancia;
+
     public string infoV;
     public int precioDiario;
-    [SerializeField] private Ciudad origen;
+    
 
     public int getVueloPrecio() {
         return precioVueloDistancia;

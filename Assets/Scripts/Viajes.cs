@@ -7,8 +7,8 @@ using TMPro;
 public class Viajes : MonoBehaviour
 {
     [Header("Scripts")]
-    public GameObject gameManager;
-    [SerializeField]private Player pl;
+    [SerializeField] private Datos datos;
+    [SerializeField] private Player pl;
 
     [Header("Viaje")]
     public GameObject botonViajar;
@@ -20,23 +20,24 @@ public class Viajes : MonoBehaviour
 
     private void Start()
     {
-        pl = gameManager.GetComponent<Player>();
+        datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
+        //pl = gameManager.GetComponent<Player>();
         nDias = -1;
-        //buscar los viajes con destino el viajarA de GM, colocarlos en List
     }
 
     public void Viajar() {
         //get viaje
         //get dias y precio
 
-        viajando();
+        //viajando(); activar con wallet
         if (!v_seleccionado || nDias<1)
         {
             Debug.Log("NO Viajando");
         }
         else {
             Debug.Log("Viajando uouououou");
-            gameManager.GetComponent<Global>().setCiudadDesde(v_seleccionado.getDestino());
+            datos.setViajarDesde(v_seleccionado.getDestino());
+            //escena de pruebas
             SceneManager.LoadScene("Alicante");
             //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
         }

@@ -17,7 +17,7 @@ public class InfoViaje : MonoBehaviour
     public GameObject nDiasInput;
 
     [Header("Managers")]
-    public GameObject gameManager;
+    [SerializeField] private Datos datos;
     public Viajes viajes;
 
     [Header("Colors")]
@@ -31,11 +31,9 @@ public class InfoViaje : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
         content = transform.parent.gameObject;
 
-        viajes = gameManager.GetComponent<Viajes>();
+        viajes = Camera.main.GetComponent<Viajes>();
         viajes.BotonViajar();
 
         bg = gameObject.GetComponent<Image>();
