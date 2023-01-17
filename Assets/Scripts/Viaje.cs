@@ -12,9 +12,7 @@ public class Viaje : ScriptableObject
     //[SerializeField]private Sprite logo;//imagen de vista en el viaje
     [SerializeField] private int precioVueloDistancia;
 
-    public string infoV;
-    public int precioDiario;
-    
+    public string infoV;    
 
     public int getVueloPrecio() {
         return precioVueloDistancia;
@@ -28,7 +26,7 @@ public class Viaje : ScriptableObject
     {
         return origen;
     }
-
+        
     public void setDestino(Ciudad c)
     {
         destino=c;
@@ -42,11 +40,6 @@ public class Viaje : ScriptableObject
     public void setVueloPrecioDistancia(int c)
     {
         precioVueloDistancia = c;
-    }
-
-    public void setPrecioDiario(int c)
-    {
-        precioDiario = c;
     }
 
     //[Header("Companyia")]

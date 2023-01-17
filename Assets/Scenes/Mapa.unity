@@ -435,9 +435,13 @@ MonoBehaviour:
   ciudades: []
   viajes: []
   examenes: []
+  premios: []
   jugando: []
   nueva: 0
   nCiudades: 10
+  nCiudad: 0
+  viajarA: {fileID: 0}
+  viajarDesde: {fileID: 0}
 --- !u!4 &244793054
 Transform:
   m_ObjectHideFlags: 0
@@ -2102,8 +2106,8 @@ MonoBehaviour:
   aleatoria: []
   nRutas: 0
   rutaElegida: 0
-  nCiudad: 0
   pistaText: {fileID: 0}
+  datos: {fileID: 0}
 --- !u!4 &745310018
 Transform:
   m_ObjectHideFlags: 0
@@ -2147,8 +2151,7 @@ MonoBehaviour:
   codigoRuta: {fileID: 0}
   menuOpciones: {fileID: 0}
   gameManager: {fileID: 0}
-  viajarA: {fileID: 0}
-  viajarDesde: {fileID: 0}
+  datos: {fileID: 0}
 --- !u!114 &745310022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2177,7 +2180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57fd40ebbbe0d3b4fbd0dad62d22f59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  datos: {fileID: 0}
   pl: {fileID: 0}
   botonViajar: {fileID: 0}
   v_seleccionado: {fileID: 0}

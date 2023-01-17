@@ -9,6 +9,8 @@ public class Datos : MonoBehaviour
     public List<Ciudad> ciudades;
     public List<Viaje> viajes;
     public List<Examen> examenes;
+    public List<Premio> premios;
+    public List<Hotel> hoteles;
 
     [Header("Ruta jugando")]
     public Ciudad[] jugando;
@@ -25,7 +27,9 @@ public class Datos : MonoBehaviour
         nueva = true;//empieza true para tener partida nueva
         ciudades = Resources.LoadAll<Ciudad>("Ciudades").ToList();
         viajes = Resources.LoadAll<Viaje>("Viajes").ToList();
+        premios = Resources.LoadAll<Premio>("Premios").ToList();
         examenes = Resources.LoadAll<Examen>("Examenes").ToList();
+        hoteles = Resources.LoadAll<Hotel>("Hoteles").ToList();
         nCiudad = 0;
         //forzar resolucion
         Screen.SetResolution(1920,1080,true);
@@ -46,6 +50,25 @@ public class Datos : MonoBehaviour
                 if (viajes[i].getDestino().id == destino.id && viajes[i].getOrigen().id == origen.id)
                 {
                     v.Add(viajes[i]);
+                }
+            }
+        }
+
+        return v;
+    }
+
+    public List<Hotel> hotelesPosbles(Ciudad destino)
+    {
+
+        List<Hotel> v = new List<Hotel>();
+
+        for (int i = 0; i < hoteles.Count; i++)
+        {
+            if (hoteles[i] != null)
+            {
+                if (hoteles[i].getCiudad().id == destino.id)
+                {
+                    v.Add(hoteles[i]);
                 }
             }
         }
@@ -116,6 +139,7 @@ public class Datos : MonoBehaviour
         //segun el numero de ciudades en cada ruta, cuidado con las customs
         if (nCiudad == gameObject.GetComponent<Datos>().getNCiudades())
         {
+
             Debug.Log("ACABASTE LA RUTA");
         }
         else

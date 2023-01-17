@@ -57,7 +57,7 @@ public class Global : MonoBehaviour
     public void Viajar(Ciudad c) {
 
         datos.setViajarA(c);
-        SceneManager.LoadScene("Tienda");
+        SceneManager.LoadScene("Viaje");
     }
 
     void activarGO() {

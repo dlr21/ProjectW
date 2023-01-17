@@ -4,21 +4,20 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class InfoViaje : MonoBehaviour
+public class InfoHotel : MonoBehaviour
 {
 
     [Header("Viaje")]
-    [SerializeField] private Viaje v;
-    public GameObject ori;
+    [SerializeField] private Hotel v;
     public GameObject dest;
     public GameObject infoV;
-    public GameObject precioV;
-    //public GameObject precioDias;
-    //public GameObject nDiasInput;
+    //public GameObject precioV;
+    public GameObject precioDias;
+    public GameObject nDiasInput;
 
     [Header("Managers")]
     [SerializeField] private Datos datos;
-    public Viajes viajes;
+    public Hoteles hoteles;
 
     [Header("Colors")]
     private Image bg;
@@ -33,53 +32,52 @@ public class InfoViaje : MonoBehaviour
     {
         content = transform.parent.gameObject;
 
-        viajes = Camera.main.GetComponent<Viajes>();
-        viajes.BotonViajar();
+        hoteles = Camera.main.GetComponent<Hoteles>();
+        hoteles.BotonViajar();
 
         bg = gameObject.GetComponent<Image>();
     }
 
     public void Seleccion() {
-        if (viajes.setViaje(v))
+        Debug.Log("seleccion");
+        if (hoteles.setViaje(v))
         {
             ColorSelect();
-            Debug.Log("seleccionado " + v.infoV);
+            Debug.Log("seleccionado " + v.getHotel());
         }
     }
 
     public void nDiasChange()
     {
-        //int.TryParse(nDiasInput.GetComponent<TMP_InputField>().text, out viajes.nDias);
+        int.TryParse(nDiasInput.GetComponent<TMP_InputField>().text, out hoteles.nDias);
     }
 
     public void ColorSelect() {
         bg.color = new Color(Color.green.r, Color.green.g, Color.green.b,0.4f);
-        //nDiasInput.GetComponent<TMP_InputField>().text = "";
+        nDiasInput.GetComponent<TMP_InputField>().text = "";
         select = true;
     }
 
     public void ColorDesSelect()
     {
         bg.color = new Color(Color.white.r, Color.white.g, Color.white.b, 0.4f);
-        //nDiasInput.GetComponent<TMP_InputField>().text="";
+        nDiasInput.GetComponent<TMP_InputField>().text="";
         select = false;
     }
 
-    public void setViaje(Viaje viaje)
+    public void setViaje(Hotel viaje)
     {
         if (viaje != null) {
             v = viaje;
-            ori.GetComponent<TextMeshProUGUI>().text = v.getOrigen().nombre;
-            dest.GetComponent<TextMeshProUGUI>().text = v.getDestino().nombre;
-            infoV.GetComponent<TextMeshProUGUI>().text = v.infoV;
-            precioV.GetComponent<TextMeshProUGUI>().text = v.getVueloPrecio().ToString();
-            //precioDias.GetComponent<TextMeshProUGUI>().text = v.precioDiario.ToString();
+            dest.GetComponent<TextMeshProUGUI>().text = v.getCiudad().nombre;
+            infoV.GetComponent<TextMeshProUGUI>().text = v.getHotel();
+            precioDias.GetComponent<TextMeshProUGUI>().text = v.getPrecioDiario().ToString();
         }
     }
 
     public void selectNdias() {
         if (!select) {
-            viajes.DesSelectAll();
+            hoteles.DesSelectAll();
         }
     }
 

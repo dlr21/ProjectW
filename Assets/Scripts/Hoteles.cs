@@ -4,19 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class Viajes : MonoBehaviour
+public class Hoteles : MonoBehaviour
 {
     [Header("Scripts")]
     [SerializeField] private Datos datos;
     [SerializeField] private Player pl;
 
-    [Header("Viaje")]
+    [Header("Hotel")]
     public GameObject botonViajar;
-    public Viaje v_seleccionado;
+    public Hotel h_seleccionado;
     public int nDias;
 
-    [Header("Viajes posibles")]
-    [SerializeField] private List<GameObject> viajes;
+    [Header("Hoteles posibles")]
+    [SerializeField] private List<GameObject> hoteles;
 
     private void Start()
     {
@@ -26,19 +26,16 @@ public class Viajes : MonoBehaviour
     }
 
     public void Viajar() {
-        //get viaje
-        //get dias y precio
 
         //viajando(); activar con wallet
-        if (!v_seleccionado /*|| nDias<1*/)
+        if (!h_seleccionado || nDias<1)
         {
             Debug.Log("NO Viajando");
         }
         else {
             Debug.Log("Viajando uouououou");
-            datos.setViajarDesde(v_seleccionado.getDestino());
             //escena de pruebas
-            SceneManager.LoadScene("Hotel");
+            SceneManager.LoadScene("Alicante");
             //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
         }
 
@@ -46,31 +43,31 @@ public class Viajes : MonoBehaviour
 
     //al confirmar el viaje con el boton viajar
     public void viajando() {
-        pl.restWallet(precioViaje(v_seleccionado));
+        pl.restWallet(precioHotel(h_seleccionado));
     }
 
-    public int precioViaje(Viaje v) {
+    public int precioHotel(Hotel v) {
         int total = 0;
         if (v != null) {         
-            //total = v.precioDiario * nDias;
-            total = total + v.getVueloPrecio();
+            total = total+v.getPrecioDiario() * nDias;
+            //total = total + v.getVueloPrecio();
         }
         return total;
     }
 
     //al hacer clic en el post del viaje
-    public bool setViaje(Viaje v) {
+    public bool setViaje(Hotel v) {
 
-        Viaje aux = v_seleccionado;
+        Hotel aux = h_seleccionado;
         //si hay viaje seleccionado desseleccionar el viaje en verde
         DesSelectAll();
 
         //si no hay un viaje seleccionado lo selecciono
-        if (!v_seleccionado && aux!=v)
+        if (!h_seleccionado && aux!=v)
         {
-            //nDias = 0;
+            nDias = 0;
             botonViajar.SetActive(true);
-            v_seleccionado = v;
+            h_seleccionado = v;
             return true;
         }
         
@@ -87,17 +84,17 @@ public class Viajes : MonoBehaviour
     }
 
     public void addViaje(GameObject v) {
-        viajes.Add(v);
+        hoteles.Add(v);
     }
 
     public void DesSelectAll()
     {
-        foreach (GameObject objet in viajes)
+        foreach (GameObject objet in hoteles)
         {
-            objet.GetComponent<InfoViaje>().ColorDesSelect();
+            objet.GetComponent<InfoHotel>().ColorDesSelect();
         }
         nDias = 0;
         botonViajar.SetActive(false);
-        v_seleccionado = null;
+        h_seleccionado = null;
     }
 }
