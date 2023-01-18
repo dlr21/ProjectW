@@ -486,8 +486,8 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InfoViaje, Assembly-CSharp
+      - m_Target: {fileID: 8277809259238077250}
+        m_TargetAssemblyTypeName: InfoHotel, Assembly-CSharp
         m_MethodName: nDiasChange
         m_Mode: 1
         m_Arguments:
@@ -504,8 +504,8 @@ MonoBehaviour:
   m_OnSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InfoViaje, Assembly-CSharp
+      - m_Target: {fileID: 8277809259238077250}
+        m_TargetAssemblyTypeName: InfoHotel, Assembly-CSharp
         m_MethodName: selectNdias
         m_Mode: 1
         m_Arguments:

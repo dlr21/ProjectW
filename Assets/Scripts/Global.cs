@@ -9,6 +9,7 @@ public class Global : MonoBehaviour
 {
     [SerializeField] private GameObject codigoRuta;
     [SerializeField] private GameObject menuOpciones;
+    [SerializeField] private GameObject menuGameOver;
     [SerializeField] private GameObject gameManager;
     [SerializeField] private Datos datos;
 
@@ -16,8 +17,10 @@ public class Global : MonoBehaviour
     void getGameobjects()
     {
             codigoRuta = GameObject.FindGameObjectWithTag("codigoRuta");
-            menuOpciones = GameObject.FindGameObjectWithTag("menuOpciones");
+            menuOpciones = GameObject.FindGameObjectWithTag("Menus/Opciones");
             menuOpciones.SetActive(false);
+            menuGameOver = GameObject.FindGameObjectWithTag("Menus/GameOver");
+            menuGameOver.SetActive(false);
             gameManager = GameObject.FindGameObjectWithTag("GameManager");
             datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
     }

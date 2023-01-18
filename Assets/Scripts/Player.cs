@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     public int wallet;
 
+    public int mode=1;//cada numero distinto modo de juego, afecta a wallet y...
+
     [Header("Gameobjects donde poner los valores")]
     public GameObject vistaWallet;
     public GameObject vistaNombre;
@@ -16,7 +18,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wallet = 1000;
+        wallet = 1000*mode;
         vistaWallet.GetComponent<TextMeshProUGUI>().text = wallet.ToString() + " W";
     }
 
@@ -26,9 +28,13 @@ public class Player : MonoBehaviour
     }
 
     public void restWallet(int r) {
-        wallet = wallet - r;
-        if (wallet < 0) {
-            Debug.Log("Te quedaste sin dinero");
+         
+        if (wallet - r < 0) {
+            Debug.Log("Te quedaste sin dinero GAME OVER");
+        }
+        else
+        {
+            wallet = wallet - r;
         }
     }
 
@@ -36,4 +42,7 @@ public class Player : MonoBehaviour
     {
         wallet = wallet + r;
     }
+
+
+
 }

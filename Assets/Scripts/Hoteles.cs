@@ -26,14 +26,14 @@ public class Hoteles : MonoBehaviour
     }
 
     public void Viajar() {
-
-        //viajando(); activar con wallet
+        
         if (!h_seleccionado || nDias<1)
         {
             Debug.Log("NO Viajando");
         }
         else {
             Debug.Log("Viajando uouououou");
+            viajando();
             //escena de pruebas
             SceneManager.LoadScene("Alicante");
             //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
@@ -47,12 +47,8 @@ public class Hoteles : MonoBehaviour
     }
 
     public int precioHotel(Hotel v) {
-        int total = 0;
-        if (v != null) {         
-            total = total+v.getPrecioDiario() * nDias;
-            //total = total + v.getVueloPrecio();
-        }
-        return total;
+   
+        return v.getPrecioDiario() * nDias; 
     }
 
     //al hacer clic en el post del viaje

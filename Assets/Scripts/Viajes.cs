@@ -21,15 +21,14 @@ public class Viajes : MonoBehaviour
     private void Start()
     {
         datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
-        //pl = gameManager.GetComponent<Player>();
+        pl = GameObject.FindGameObjectWithTag("Datos").GetComponent<Player>();
         nDias = -1;
     }
 
     public void Viajar() {
         //get viaje
         //get dias y precio
-
-        //viajando(); activar con wallet
+        
         if (!v_seleccionado /*|| nDias<1*/)
         {
             Debug.Log("NO Viajando");
@@ -37,6 +36,7 @@ public class Viajes : MonoBehaviour
         else {
             Debug.Log("Viajando uouououou");
             datos.setViajarDesde(v_seleccionado.getDestino());
+            viajando();
             //escena de pruebas
             SceneManager.LoadScene("Hotel");
             //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
@@ -46,16 +46,7 @@ public class Viajes : MonoBehaviour
 
     //al confirmar el viaje con el boton viajar
     public void viajando() {
-        pl.restWallet(precioViaje(v_seleccionado));
-    }
-
-    public int precioViaje(Viaje v) {
-        int total = 0;
-        if (v != null) {         
-            //total = v.precioDiario * nDias;
-            total = total + v.getVueloPrecio();
-        }
-        return total;
+        pl.restWallet(v_seleccionado.getVueloPrecio());
     }
 
     //al hacer clic en el post del viaje
