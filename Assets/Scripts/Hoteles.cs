@@ -21,7 +21,7 @@ public class Hoteles : MonoBehaviour
     private void Start()
     {
         datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
-        //pl = gameManager.GetComponent<Player>();
+        pl = GameObject.FindGameObjectWithTag("Datos").GetComponent<Player>();
         nDias = -1;
     }
 
@@ -33,17 +33,20 @@ public class Hoteles : MonoBehaviour
         }
         else {
             Debug.Log("Viajando uouououou");
-            viajando();
-            //escena de pruebas
-            SceneManager.LoadScene("Alicante");
-            //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
+            if (viajando()) {
+                //escena de pruebas
+                SceneManager.LoadScene("Alicante");
+                //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
+            }
+
+
         }
 
     }
 
     //al confirmar el viaje con el boton viajar
-    public void viajando() {
-        pl.restWallet(precioHotel(h_seleccionado));
+    public bool viajando() {
+        return pl.restWallet(precioHotel(h_seleccionado));
     }
 
     public int precioHotel(Hotel v) {

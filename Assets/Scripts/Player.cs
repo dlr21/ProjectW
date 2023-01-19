@@ -14,7 +14,11 @@ public class Player : MonoBehaviour
     [Header("Gameobjects donde poner los valores")]
     public GameObject vistaWallet;
     public GameObject vistaNombre;
-    
+
+    public GameObject gameOver;
+    //prefab GameObject
+    public GameObject gameOverPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,20 +26,45 @@ public class Player : MonoBehaviour
         vistaWallet.GetComponent<TextMeshProUGUI>().text = wallet.ToString() + " W";
     }
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            restWallet(1000);
+        }
+    }
+
     public void setNombre() {
         nombre = vistaNombre.GetComponent<TextMeshProUGUI>().text;
         vistaNombre.GetComponent<TextMeshProUGUI>().text = nombre.ToString();
     }
 
-    public void restWallet(int r) {
+    public bool restWallet(int r) {
          
-        if (wallet - r < 0) {
-            Debug.Log("Te quedaste sin dinero GAME OVER");
+        if (wallet - r <= 0) {
+            wallet = 0;
+            walletText();
+            spawnGO();
+            return false;
         }
         else
         {
             wallet = wallet - r;
+            walletText();
+            return true;
         }
+    }
+
+    void walletText() {
+        //asi sabemos si estamos en el mapa con el wallet visible
+        if (!vistaWallet) {
+            vistaWallet = GameObject.FindGameObjectWithTag("vistaWallet");
+        }
+        //si lo estamos escribimos
+        if (vistaWallet) {
+            vistaWallet.GetComponent<TextMeshProUGUI>().text = wallet.ToString() + " W";
+        }
+        
     }
 
     public void sumWallet(int r)
@@ -43,6 +72,9 @@ public class Player : MonoBehaviour
         wallet = wallet + r;
     }
 
-
+    public void spawnGO() {
+        GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
+        gameOver= Instantiate(gameOverPrefab, canvas.transform) as GameObject;
+    }
 
 }

@@ -19,18 +19,14 @@ public class Global : MonoBehaviour
             codigoRuta = GameObject.FindGameObjectWithTag("codigoRuta");
             menuOpciones = GameObject.FindGameObjectWithTag("Menus/Opciones");
             menuOpciones.SetActive(false);
-            menuGameOver = GameObject.FindGameObjectWithTag("Menus/GameOver");
-            menuGameOver.SetActive(false);
-            gameManager = GameObject.FindGameObjectWithTag("GameManager");
             datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
     }
 
     private void Start()
     {
         getGameobjects();
-        //comenzar cada partida desde una ciudad distinta
-        //if(datos.nueva)datos.ciudadAleatoria(); 
     }
+
 
     /// <summary>
     /// Menu opciones
@@ -63,9 +59,7 @@ public class Global : MonoBehaviour
         SceneManager.LoadScene("Viaje");
     }
 
-    void activarGO() {
-        menuOpciones.SetActive(true);
-    }
+
 
 
 }

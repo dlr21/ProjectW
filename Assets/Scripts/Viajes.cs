@@ -36,17 +36,20 @@ public class Viajes : MonoBehaviour
         else {
             Debug.Log("Viajando uouououou");
             datos.setViajarDesde(v_seleccionado.getDestino());
-            viajando();
-            //escena de pruebas
-            SceneManager.LoadScene("Hotel");
-            //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
+            if (viajando()) {
+                //escena de pruebas
+                SceneManager.LoadScene("Hotel");
+                //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");
+
+            }
+
         }
 
     }
 
     //al confirmar el viaje con el boton viajar
-    public void viajando() {
-        pl.restWallet(v_seleccionado.getVueloPrecio());
+    public bool viajando() {
+        return pl.restWallet(v_seleccionado.getVueloPrecio());
     }
 
     //al hacer clic en el post del viaje

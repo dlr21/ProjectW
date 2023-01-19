@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Datos : MonoBehaviour
 {
@@ -176,5 +177,10 @@ public class Datos : MonoBehaviour
 
     public void primeraCiudad() {
         nCiudad = 0;
+    }
+
+    public void partidaNueva() {
+        nueva = true;
+        SceneManager.LoadScene("Mapa");
     }
 }
