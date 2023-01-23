@@ -473,9 +473,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: 
   wallet: 0
+  puntos: 0
   mode: 1
-  vistaWallet: {fileID: 393161747}
-  vistaNombre: {fileID: 1990985984}
   gameOver: {fileID: 0}
   gameOverPrefab: {fileID: 3773100921685418121, guid: b708f23101b973b4297cb1ecc9c1d417, type: 3}
 --- !u!1 &247090357
@@ -708,7 +707,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.5494385, y: 0, z: 0.6960449, w: 0}
+  m_margin: {x: -34.035034, y: 0, z: -33.94426, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2155,9 +2154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codigoRuta: {fileID: 0}
   menuOpciones: {fileID: 0}
-  menuGameOver: {fileID: 0}
-  gameManager: {fileID: 0}
   datos: {fileID: 0}
+  player: {fileID: 0}
+  vistaWallet: {fileID: 393161747}
+  vistaNombre: {fileID: 1086695008}
 --- !u!1 &879145448
 GameObject:
   m_ObjectHideFlags: 0
@@ -3017,9 +3017,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: setNombre
+      - m_Target: {fileID: 745310020}
+        m_TargetAssemblyTypeName: Global, Assembly-CSharp
+        m_MethodName: setnombre
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3525,8 +3525,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: 145.0738, y: 50}
+  m_AnchoredPosition: {x: 64, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417208791
 MonoBehaviour:

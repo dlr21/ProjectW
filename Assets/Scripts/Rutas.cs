@@ -28,10 +28,12 @@ public class Rutas : MonoBehaviour
     [SerializeField] private GameObject pistaText;
 
     [SerializeField] private Datos datos;
+    [SerializeField] private Player player;
 
 
     void Awake() {
         datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
+        player = GameObject.FindGameObjectWithTag("Datos").GetComponent<Player>();
         infoCiudad = GameObject.FindGameObjectWithTag("infoCiudad");
         pinAux = GameObject.FindGameObjectWithTag("pinAux");
         pistaText = GameObject.FindGameObjectWithTag("pistaText");
@@ -62,8 +64,15 @@ public class Rutas : MonoBehaviour
         {
             createRuta(nueva);
         }
-        datos.jugando[datos.getNciudad()].activo = true;
-        pistaCiudad();
+        if (datos.getNciudad() < datos.jugando.Length)
+        {
+            datos.jugando[datos.getNciudad()].activo = true;
+            pistaCiudad();
+        }
+        else {
+            Debug.Log("HAS TERMINADO LA RUTA");
+        }
+        
     }
 
     public int RandomRuta()
@@ -193,12 +202,18 @@ public class Rutas : MonoBehaviour
             if (p.pinClicado) { 
                 if (p.ciudad.id == datos.jugando[datos.getNciudad()].id)
                 {
+                    player.setCorrecta(true);
+                    Debug.Log("Ciudad Correcta");
                     gameObject.GetComponent<Global>().Viajar(p.ciudad);
+                    
                     return;
                 }
                 else
                 {
                     Debug.Log("Ciudad Erronea");
+                    player.setCorrecta(false);
+                    gameObject.GetComponent<Global>().Viajar(p.ciudad);
+                    
                     return;
                 }
             }

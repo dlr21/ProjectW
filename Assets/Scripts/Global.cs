@@ -9,10 +9,12 @@ public class Global : MonoBehaviour
 {
     [SerializeField] private GameObject codigoRuta;
     [SerializeField] private GameObject menuOpciones;
-    [SerializeField] private GameObject menuGameOver;
-    [SerializeField] private GameObject gameManager;
     [SerializeField] private Datos datos;
 
+    [Header("Gameobjects donde poner los valores")]
+    public Player player;
+    public GameObject vistaWallet;
+    public GameObject vistaNombre;
 
     void getGameobjects()
     {
@@ -20,13 +22,19 @@ public class Global : MonoBehaviour
             menuOpciones = GameObject.FindGameObjectWithTag("Menus/Opciones");
             menuOpciones.SetActive(false);
             datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
+            player = GameObject.FindGameObjectWithTag("Datos").GetComponent<Player>();
     }
 
     private void Start()
     {
         getGameobjects();
+        vistaWallet.GetComponent<TextMeshProUGUI>().text = player.wallet.ToString() + " W";
     }
 
+    public void setnombre() {
+        player.setNombre(vistaNombre.GetComponent<TMP_InputField>().text); 
+        vistaNombre.GetComponent<TMP_InputField>().text = player.nombre.ToString();
+    }
 
     /// <summary>
     /// Menu opciones
@@ -43,7 +51,7 @@ public class Global : MonoBehaviour
     public void CargarRutaButton()
     {
         string t = codigoRuta.GetComponent<TMP_InputField>().text;
-        if (gameManager.GetComponent<Rutas>().pintarRuta(t))
+        if (gameObject.GetComponent<Rutas>().pintarRuta(t))
         {
             menuOpciones.SetActive(false);
         }

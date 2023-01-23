@@ -37,6 +37,7 @@ public class Viajes : MonoBehaviour
             Debug.Log("Viajando uouououou");
             datos.setViajarDesde(v_seleccionado.getDestino());
             if (viajando()) {
+                pl.setReembolso(v_seleccionado.getReembolso());
                 //escena de pruebas
                 SceneManager.LoadScene("Hotel");
                 //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");

@@ -183,4 +183,6 @@ public class Datos : MonoBehaviour
         nueva = true;
         SceneManager.LoadScene("Mapa");
     }
+
+
 }

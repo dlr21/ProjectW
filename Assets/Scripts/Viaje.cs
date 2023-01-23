@@ -11,6 +11,7 @@ public class Viaje : ScriptableObject
     [SerializeField] private Ciudad origen;
     //[SerializeField]private Sprite logo;//imagen de vista en el viaje
     [SerializeField] private int precioVueloDistancia;
+    [SerializeField] private int reembolso=0;
 
     public string infoV;    
 
@@ -26,7 +27,12 @@ public class Viaje : ScriptableObject
     {
         return origen;
     }
-        
+
+    public int getReembolso()
+    {
+        return reembolso;
+    }
+
     public void setDestino(Ciudad c)
     {
         destino=c;
