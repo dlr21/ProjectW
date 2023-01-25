@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class Cofre : MonoBehaviour
 {
-    [SerializeField] private GameObject gm;
     [SerializeField] private Ciudad ciudad;
 
     [SerializeField] private Examen examen;
@@ -22,31 +21,79 @@ public class Cofre : MonoBehaviour
     [SerializeField] private GameObject fallo;
     [SerializeField] private GameObject todasBien;
 
-    [SerializeField] private Datos datos;
+    [SerializeField] private GameObject datos;
 
+    [Header("Booleanos")]
     public bool pRespondida;
     public bool fin;
+    public bool contando;
+
+    [Header("Temporizador")]
+    public GameObject tempo;
+    public float tiempoPorExamen = 60.0f;
+    public float tiempo;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
-        ciudad = datos.getViajarDesde();
-        examen=datos.cargarPreguntas(ciudad);
+        datos = GameObject.FindGameObjectWithTag("Datos");
+        ciudad = datos.GetComponent<Datos>().getViajarDesde();
+        examen=datos.GetComponent<Datos>().cargarPreguntas(ciudad);
         examenVisuals.SetActive(false);
         fallo.SetActive(false);
         todasBien.SetActive(false);
         next.SetActive(false);
+        tempo.SetActive(false);
+        tiempo = tiempoPorExamen;
+    }
+
+    private void Update()
+    {
+        if (contando) {
+            tiempo -= Time.deltaTime;
+
+            tempo.GetComponent<TextMeshProUGUI>().text = "Tiempo:" + " " + FormatTime(tiempo);
+
+            if (tiempo < 0) {
+                contando = false;
+                fallo.SetActive(true);
+            }
+        }
+    }
+
+    public string FormatTime(float time)
+    {
+        int minutes = (int)time / 60;
+        int seconds = (int)time - 60 * minutes;
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     public void clicCofre() {
+        empezarContador();
         EmpezarExamen();
-
         Debug.Log("Clic cofre abrir preguntas");
     }
 
     public void clicX()
     {
+        if (contando) {
+            pararContador();
+        }
         CerrarExamen();
+    }
+
+    public void empezarContador()
+    {
+        tempo.SetActive(true);
+        tiempo = tiempoPorExamen;
+        contando = true;
+        Debug.Log("empezarContador");
+    }
+
+    public void pararContador() {
+        contando = false;
+        Debug.Log("pararContador");
     }
 
     void EmpezarExamen() {
@@ -59,6 +106,7 @@ public class Cofre : MonoBehaviour
 
     void CerrarExamen()
     {
+        tempo.SetActive(false);
         examenVisuals.SetActive(false);
         fallo.SetActive(false);
     }
@@ -82,6 +130,7 @@ public class Cofre : MonoBehaviour
             opt.GetComponent<Image>().color = new Color(Color.green.r, Color.green.g, Color.green.b, 0.4f);
             pRespondida = true;
             next.SetActive(true);
+            datos.GetComponent<Player>().getPuntuacion().preguntaCorrecta();
             //ULTIMA PREGUNTA ACERTADA
             if (examen.nPregunta >= examen.preguntas.Count-1) {
                 fin = true;
@@ -90,13 +139,14 @@ public class Cofre : MonoBehaviour
         }
         else if(!pRespondida){
             opt.GetComponent<Image>().color = new Color(Color.red.r, Color.red.g, Color.red.b, 0.4f);
+            datos.GetComponent<Player>().getPuntuacion().preguntaIncorrecta();
             fallo.SetActive(true);
         }
         
     }
 
     public void finVolverMapa() {
-        datos.nextCity();
+        datos.GetComponent<Datos>().nextCity();
         SceneManager.LoadScene("Mapa");
     }
 

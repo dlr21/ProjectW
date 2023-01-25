@@ -479,6 +479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   datos: {fileID: 0}
+  player: {fileID: 0}
+  puntos: {fileID: 0}
 --- !u!1 &3773100922091054364
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +764,7 @@ GameObject:
   - component: {fileID: 3773100922361585654}
   m_Layer: 5
   m_Name: NPuntuacion
-  m_TagString: Untagged
+  m_TagString: Puntos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

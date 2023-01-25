@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     public string nombre;
 
     public int wallet;
-    public int puntos;
     public int mode=1;//cada numero distinto modo de juego, afecta a wallet y...
 
     public GameObject gameOver;
@@ -18,6 +17,8 @@ public class Player : MonoBehaviour
     [Header("Reembolso")]
     public bool correcta;
     private int reembolso;
+
+    [SerializeField] public Puntuacion puntuacion;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +64,7 @@ public class Player : MonoBehaviour
 
     public void partidaNueva() {
         wallet = 10000 * mode;
-        puntos = 0;
+        puntuacion.nueva();
     }
 
     public void setCorrecta(bool b)
@@ -82,6 +83,11 @@ public class Player : MonoBehaviour
 
     public void setReembolso(int i) {
         reembolso=i;
+    }
+
+    public Puntuacion getPuntuacion()
+    {
+        return puntuacion;
     }
 
 }

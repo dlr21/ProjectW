@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameOver : MonoBehaviour
@@ -8,10 +9,18 @@ public class GameOver : MonoBehaviour
     public Datos datos;
     public Player player;
 
+    public GameObject puntos;
+
     private void Start()
     {
         datos = GameObject.FindGameObjectWithTag("Datos").GetComponent<Datos>();
         player = GameObject.FindGameObjectWithTag("Datos").GetComponent<Player>();
+        puntos = GameObject.FindGameObjectWithTag("Puntos");
+        escribirPuntuacion();
+    }
+
+    public void escribirPuntuacion() {
+        puntos.GetComponent<TextMeshProUGUI>().text = player.getPuntuacion().getPuntos().ToString();
     }
 
 

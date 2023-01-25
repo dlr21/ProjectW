@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 244793053}
   - component: {fileID: 244793052}
   - component: {fileID: 244793055}
+  - component: {fileID: 244793056}
   m_Layer: 0
   m_Name: Datos
   m_TagString: Datos
@@ -473,10 +474,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: 
   wallet: 0
-  puntos: 0
   mode: 1
   gameOver: {fileID: 0}
   gameOverPrefab: {fileID: 3773100921685418121, guid: b708f23101b973b4297cb1ecc9c1d417, type: 3}
+  correcta: 0
+  puntuacion: {fileID: 244793056}
+--- !u!114 &244793056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244793051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265b7fd4e18e6dc4d9fc10ca9bdbf252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntos: 0
 --- !u!1 &247090357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,6 +2140,7 @@ MonoBehaviour:
   rutaElegida: 0
   pistaText: {fileID: 0}
   datos: {fileID: 0}
+  player: {fileID: 0}
 --- !u!4 &745310018
 Transform:
   m_ObjectHideFlags: 0
