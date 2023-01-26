@@ -34,6 +34,7 @@ public class Hoteles : MonoBehaviour
         else {
             Debug.Log("Viajando uouououou");
             if (viajando()) {
+                pl.getPuntuacion().masDias(nDias);
                 //escena de pruebas
                 SceneManager.LoadScene("Alicante");
                 //SceneManager.LoadScene(seleccionado.getCiudad().nombre+"Explora");

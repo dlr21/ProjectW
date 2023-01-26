@@ -20,6 +20,7 @@ public class GameOver : MonoBehaviour
     }
 
     public void escribirPuntuacion() {
+        player.getPuntuacion().TodoToPuntos();
         puntos.GetComponent<TextMeshProUGUI>().text = player.getPuntuacion().getPuntos().ToString();
     }
 
