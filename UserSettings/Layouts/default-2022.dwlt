@@ -145,8 +145,8 @@ MonoBehaviour:
     y: 0
     width: 402
     height: 987
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -487,21 +487,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Games\mio\ProjectW
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 111}
-    m_SelectedIDs: 286b0000
-    m_LastClickedID: 27432
+    m_SelectedIDs: 266b0000
+    m_LastClickedID: 27430
     m_ExpandedIDs: 000000001c6b00001e6b0000206b0000226b0000246b0000266b0000286b00002a6b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -558,7 +558,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000000000000
+    m_ExpandedInstanceIDs: c623000000000000fc600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -658,9 +658,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ca5e0000
-      m_LastClickedID: 24266
-      m_ExpandedIDs: 24fbfffff4ffffff
+      m_SelectedIDs: 586b0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 14a9ffffc0acffff54aeffff32b4ffff0cb8ffff30c0ffff0ec6ffff7ad1ffff02d3ffffe6d8ffff82dbffff10ddffffcadfffffc8e4ffff86e5ffff68ebffff34ecffffacedffff8cf3ffffd0f9ffff24fbfffff4ffffff826b0000d06c0000be9c000056a500005ca5000078ac00002cb2000056b9000002bb0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -975,9 +975,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 950.6729, y: 688.2766, z: -1.3018379}
+    m_Target: {x: -9.561259, y: 7.0176487, z: -0.22513981}
     speed: 2
-    m_Value: {x: 950.6729, y: 688.2766, z: -1.3018379}
+    m_Value: {x: -9.561259, y: 7.0176487, z: -0.22513981}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1027,9 +1027,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1081.8579
+    m_Target: 22.361517
     speed: 2
-    m_Value: 1081.8579
+    m_Value: 22.361517
   m_Ortho:
     m_Target: 1
     speed: 2
