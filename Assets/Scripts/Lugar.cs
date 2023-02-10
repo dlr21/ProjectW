@@ -6,7 +6,7 @@ public class Lugar : MonoBehaviour
 {
 
     public Transform posicion;
-    public List<Lugar> adyacentes;
+    //public List<Lugar> adyacentes;
 
     // Start is called before the first frame update
     void Start()
