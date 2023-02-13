@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 608
     height: 685
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 674
     height: 302
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 136
+  controlID: 85
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 172
+  controlID: 167
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,8 +145,8 @@ MonoBehaviour:
     y: 0
     width: 402
     height: 987
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 53
+  controlID: 55
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 54
+  controlID: 56
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -487,22 +487,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scenes/Ciudades
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scenes/Ciudades
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Games\mio\ProjectW
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 111}
-    m_SelectedIDs: 226c0000
-    m_LastClickedID: 27682
-    m_ExpandedIDs: 00000000186c00001a6c00001c6c00001e6c0000206c0000226c0000246c0000266c0000286c00002a6c0000466c000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: c86b0000
+    m_LastClickedID: 27592
+    m_ExpandedIDs: 00000000926b0000946b0000966b0000986b00009a6b00009c6b00009e6b0000a06b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -530,7 +530,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000186c00001a6c00001c6c00001e6c0000206c0000226c0000246c0000266c0000286c00002a6c0000
+    m_ExpandedIDs: 00000000926b0000946b0000966b0000986b00009a6b00009c6b00009e6b0000a06b0000a26b0000a46b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -558,7 +558,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000000000000fc600000c26b0000
+    m_ExpandedInstanceIDs: c6230000c26b0000d06f00006868000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -658,20 +658,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 58cf0000
-      m_LastClickedID: 53080
-      m_ExpandedIDs: c27bffff9e81ffff24fbfffff4ffffff7c5f000036cd0000a4cd0000
+      m_SelectedIDs: f6290100
+      m_LastClickedID: 76278
+      m_ExpandedIDs: 4257ffff3265ffff146bffffb470ffffce77ffffd87affff1c7cfffff881ffff6284ffff828bffff7297ffffbe9effff76a5ffffbcacffff72b5ffff84b7ffff94c0ffffecd9ffff14e0fffff4e5ffffbef9ffff24fbfffff4ffffff6a6c0000166d00009a6e0000946f0000549b0000d89c00007c9e0000289f0000e49f0000aca0000026a10000aaa10000a0b9000088ce000094ce000010cf000040cf000078cf00002edf000054df00007cdf0000b2df0000f6df000000e000001ee0000024e0000054e0000058e00000c8e00000fce000001ee100005ae10000e6e100003ee2000006fc00000cfc00003cfc0000280801002e0801005e080100740a0100d21301004c1401005214010082140100be140100ce1b01004e1c01007e1c0100ba1c0100e62601006627010096270100d2270100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Marq
-        m_OriginalName: Marq
+        m_Name: CofreExamen
+        m_OriginalName: CofreExamen
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 24494
+        m_UserData: 71354
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -975,9 +975,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 18.851072, y: -22.862968, z: -8.92024}
+    m_Target: {x: 6.6611347, y: 2.7175002, z: -0.039562225}
     speed: 2
-    m_Value: {x: -37.648926, y: -16.16297, z: -8.92024}
+    m_Value: {x: 8.14, y: -4.02, z: 17.940481}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1027,9 +1027,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 16.77393
+    m_Target: 5.3139524
     speed: 2
-    m_Value: 16.77393
+    m_Value: 1.8103039
   m_Ortho:
     m_Target: 1
     speed: 2
